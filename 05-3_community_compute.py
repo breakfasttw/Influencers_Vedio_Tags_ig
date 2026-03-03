@@ -1,11 +1,5 @@
-# 執行演算法、參數設定
-
-# input
-# EDGE_LIST_PATH
-# influencer_reciprocity_matrix.csv  (Walktrap 加權需要)
-
-# output
-# community_master.json 每個演算法內有誰、Q度
+# input: influencer_bonding_matrix.csv
+# output: community_master.json (包含各演算法的分群結果與 Modularity 分數)
 
 import pandas as pd
 import networkx as nx
@@ -13,92 +7,78 @@ from networkx.algorithms import community
 import igraph as ig
 import json
 import os
+import numpy as np
 from config import *
 
 def run_community_compute():
-    print("--- 執行 03-0：統一計算社群分群 (還原原始演算法參數) ---")
+    print("--- 執行 05-3：加權社群分群運算 (Walktrap / Louvain / Greedy) ---")
     
-    # 1. 載入邊清單與互惠矩陣 (Walktrap 加權需要)
-    if not os.path.exists(EDGE_LIST_PATH) or not os.path.exists(RECIP_MATRIX_PATH):
-        print("錯誤：找不到邊清單或互惠矩陣檔案。")
+    # 1. 載入 05-1 產出的連結強度矩陣
+    matrix_path = os.path.join(INPUT_DIR, 'influencer_bonding_matrix.csv')
+    if not os.path.exists(matrix_path):
+        print(f"錯誤：找不到矩陣檔案 {matrix_path}")
         return
         
-    df_edges = pd.read_csv(EDGE_LIST_PATH)
-    recip_df = pd.read_csv(RECIP_MATRIX_PATH, index_col=0)
+    bonding_df = pd.read_csv(matrix_path, index_col=0)
+    node_names = bonding_df.index.tolist()
     
-    # 建立 NetworkX 圖形 (用於計算全域與分群)
-    G_nx = nx.from_pandas_edgelist(df_edges, source='source', target='target', create_using=nx.DiGraph())
-    G_undir = G_nx.to_undirected()
+    # 2. 轉換為 igraph 格式 (用於計算 Walktrap，此演算法對加權網路最為精準)
+    # 我們只取矩陣的上三角，避免無向圖重複建立邊
+    upper_tri = np.triu(bonding_df.values, k=1)
+    sources, targets = np.where(upper_tri > 0)
+    weights = upper_tri[sources, targets]
     
+    edges = list(zip(sources, targets))
+    g_ig = ig.Graph(n=len(node_names), edges=edges, directed=False)
+    g_ig.vs['name'] = node_names
+    g_ig.es['weight'] = weights
+
+    # 建立 NetworkX 圖形 (用於其他演算法與 Q 度計算)
+    G_nx = nx.Graph()
+    for (s, t), w in zip(edges, weights):
+        G_nx.add_edge(node_names[s], node_names[t], weight=w)
+
     results = {}
 
-    # --- [Algorithm 1: Greedy Modularity] ---
-    # 比照 03-1-1：使用 NetworkX 的 Greedy 演算法
-    print("正在計算 Greedy Modularity...")
-    c_greedy = list(community.greedy_modularity_communities(G_undir))
-    results['Greedy'] = {
-        "communities": [list(c) for c in c_greedy],
-        "Q": community.modularity(G_undir, c_greedy)
+    # --- [Algorithm 1: Walktrap] ---
+    # 這是加權網路的首選，steps=4 是經典設定
+    print("正在運算 Walktrap (加權隨機走訪)...")
+    wt_dendrogram = g_ig.community_walktrap(weights='weight', steps=4)
+    wt_comm = wt_dendrogram.as_clustering()
+    
+    results['Walktrap'] = {
+        'modularity': g_ig.modularity(wt_comm, weights='weight'),
+        'communities': [list(np.array(node_names)[list(c)]) for c in wt_comm]
     }
 
     # --- [Algorithm 2: Louvain] ---
-    # 比照 03-1-2：固定 seed=42 確保分群穩定性
-    print("正在計算 Louvain (seed=42)...")
-    c_louvain = list(community.louvain_communities(G_undir, seed=RANDOM_SEED))
+    # 適合大型網路，快速尋找高密度區域
+    print("正在運算 Louvain (模組化最佳化)...")
+    lv_comm_dict = community.louvain_communities(G_nx, weight='weight', seed=RANDOM_SEED)
+    
     results['Louvain'] = {
-        "communities": [list(c) for c in c_louvain],
-        "Q": community.modularity(G_undir, c_louvain)
+        'modularity': community.modularity(G_nx, lv_comm_dict, weight='weight'),
+        'communities': [list(c) for c in lv_comm_dict]
     }
 
-    # --- [Algorithm 3: Walktrap] ---
-    # 比照 03-1-3：還原 igraph 權重 (互粉=2.0, 單向=1.0) 與 steps=4
-    print("正在計算 Walktrap (steps=4, Weighted)...")
+    # --- [Algorithm 3: Clauset-Newman-Moore (Greedy)] ---
+    print("正在運算 Fast Greedy...")
+    gd_comm_iter = community.greedy_modularity_communities(G_nx, weight='weight')
     
-    # 1. 建立 igraph 節點映射
-    node_names = list(G_undir.nodes())
-    node_map = {name: i for i, name in enumerate(node_names)}
-    
-    # 2. 建立邊與權重 (還原原始權重邏輯)
-    edges = []
-    weights = []
-    processed_pairs = set()
-    
-    for u, v in G_undir.edges():
-        pair = tuple(sorted((u, v)))
-        if pair not in processed_pairs:
-            # 依據互惠矩陣給予權重：2.0 (互粉) or 1.0 (單向)
-            w = 2.0 if recip_df.at[u, v] == 2 else 1.0
-            edges.append((node_map[u], node_map[v]))
-            weights.append(w)
-            processed_pairs.add(pair)
-            
-    # 3. 執行 igraph Walktrap
-    g_ig = ig.Graph(n=len(node_names), edges=edges, directed=False)
-    g_ig.es['weight'] = weights
-    wt_dendrogram = g_ig.community_walktrap(weights='weight', steps=4)
-    comm_result = wt_dendrogram.as_clustering() # 自動切割最高 Modularity 處
-    
-    # 4. 轉換結果
-    membership = comm_result.membership
-    groups = {}
-    for idx, group_id in enumerate(membership):
-        name = node_names[idx]
-        if group_id not in groups: groups[group_id] = []
-        groups[group_id].append(name)
-    
-    c_wt = sorted(groups.values(), key=len, reverse=True)
-    results['Walktrap'] = {
-        "communities": c_wt,
-        "Q": comm_result.modularity
+    results['Greedy'] = {
+        'modularity': community.modularity(G_nx, gd_comm_iter, weight='weight'),
+        'communities': [list(c) for c in gd_comm_iter]
     }
 
-    OUTPUT_FILE = 'community_master.json'
-    # 儲存核心運算結果，確保後續 03-1 繪圖與 04-1 統計之數據源完全一致
-    with open(os.path.join(INPUT_DIR,OUTPUT_FILE  ), 'w', encoding='utf-8') as f:
-        json.dump(results, f, ensure_ascii=False)
-    
-    print(f"03-0 執行成功：三種演算法參數已完全還原。")
-    print(f"檔案已輸出為{OUTPUT_FILE }")
+    # 3. 儲存結果
+    output_path = os.path.join(INPUT_DIR, 'community_master.json')
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+
+    print("-" * 30)
+    print(f"階段 05-3 完成。分群結果已存至 {output_path}")
+    for algo, data in results.items():
+        print(f"[{algo}] 找到 {len(data['communities'])} 個社群, Modularity: {data['modularity']:.4f}")
 
 if __name__ == "__main__":
     run_community_compute()

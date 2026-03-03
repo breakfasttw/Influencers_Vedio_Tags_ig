@@ -1,90 +1,101 @@
-# input
-# influencer_adjacency_matrix.csv、influencer_reciprocity_matrix.csv、
-
-# output 熱力圖相關
-# influencer_clustered_heatmap.png、matrix.json
+# input: influencer_bonding_matrix.csv (由 05-1 產出)
+# output: 
+# 1. influencer_clustered_heatmap.png (加權聚類熱圖)
+# 2. matrix.json (供前端顯示使用)
 
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import json
 import os
+import numpy as np
 from config import *
 
-# ==========================================
-# 1. 關聯熱圖模組 (過濾孤島 + 產出矩陣數據)
-# ==========================================
 def generate_clustered_heatmap_and_json():
     """
-    讀取互惠矩陣，過濾無連結網紅後繪製階層聚類熱圖，
-    並捕捉聚類後的順序產出 matrix.json。
+    讀取加權連結矩陣 (Bonding Matrix)，過濾無互動網紅後，
+    使用 Ward 聚類法繪製熱圖，並產出排序後的 JSON。
     """
-    print("--- 執行 03-2：產生關聯熱圖並捕捉聚類排序 ---")
+    print("--- 執行 05-2：產生加權關聯熱圖與排序數據 ---")
     
-    # 讀取由 05-1 產出的互惠矩陣
-    recip_path = os.path.join(INPUT_DIR, 'influencer_reciprocity_matrix.csv')
-    if not os.path.exists(recip_path):
-        print(f"錯誤：找不到互惠矩陣 {recip_path}，請先執行 02-2。")
+    # ==========================================
+    # 1. 讀取 Bonding 矩陣
+    # ==========================================
+    # 這裡是 05-1 產出的「連結強度」矩陣
+    matrix_path = os.path.join(INPUT_DIR, 'influencer_bonding_matrix.csv')
+    if not os.path.exists(matrix_path):
+        print(f"錯誤：找不到矩陣檔案 {matrix_path}，請先執行 05-1。")
         return
         
-    recip_df = pd.read_csv(recip_path, index_col=0)
+    df = pd.read_csv(matrix_path, index_col=0)
+
+    # ==========================================
+    # 2. 過濾孤島 (這在 Tagging 網路中非常重要，因為很多人可能沒被標記)
+    # ==========================================
+    # 計算每個節點的總連結強度
+    node_strength = df.sum(axis=1)
+    isolated_nodes = node_strength[node_strength == 0].index.tolist()
     
-    # --- [邏輯還原] 過濾 Degree = 0 的孤島節點 ---
-    # 判斷標準：在矩陣中橫列或直欄都沒有值大於 0 的節點
-    adj_temp = (recip_df.fillna(0) > 0).astype(int)
-    nodes_with_edges = adj_temp.index[(adj_temp.sum(axis=1) > 0) | (adj_temp.sum(axis=0) > 0)]
-    clean_df = recip_df.loc[nodes_with_edges, nodes_with_edges].fillna(0)
-    isolated_count = len(recip_df) - len(clean_df)
+    # 產出乾淨的矩陣供繪圖使用
+    clean_df = df.drop(index=isolated_nodes, columns=isolated_nodes)
     
-    # 設定字體與主題 (採用 03-1-1 之參數)
-    sns.set_theme(font=FONT_SETTING[0]) # 使用 Iansui
-    
-    # 繪製 Clustermap
+    isolated_count = len(isolated_nodes)
+    print(f"原始網紅數: {len(df)}, 排除無互動者: {isolated_count}, 進入分析數: {len(clean_df)}")
+
+    if clean_df.empty:
+        print("警告：過濾後無剩餘資料，無法產製圖表。")
+        return
+
+    # ==========================================
+    # 3. 繪製加權聚類熱力圖 (Clustermap)
+    # ==========================================
+    plt.rcParams['font.sans-serif'] = FONT_SETTING
+    plt.rcParams['axes.unicode_minus'] = False
+
+    # 參數說明：
+    # - method='ward': 最小化簇內方差，最適合處理連續的 count 權重
+    # - cmap='YlOrRd': 越紅代表互動權重越高 (深紅區代表核心朋友圈)
     g = sns.clustermap(
-        clean_df, 
-        cmap="YlOrRd", 
-        linewidths=.3, 
-        linecolor='lightgray',
+        clean_df,
+        method='ward',      
+        cmap='YlOrRd',      
         figsize=(25, 25), 
         xticklabels=True, 
         yticklabels=True,
-        cbar_kws={'label': '關係強度'}, 
-        dendrogram_ratio=(0.08, 0.08),
+        cbar_kws={'label': '連結強度 (加權後得分)'}, 
+        dendrogram_ratio=(0.1, 0.1), # 樹狀圖比例
         cbar_pos=(0.02, 0.8, 0.03, 0.15) 
     )
     
-    # --- [關鍵邏輯] 捕捉聚類順序並產出 JSON ---
-    # 依據樹狀圖 (Dendrogram) 的排序重新排列標籤
+    # ==========================================
+    # 4. 捕捉聚類順序並產出 JSON (供前端 Dashboard)
+    # ==========================================
+    # 獲取聚類後的索引順序，這能讓 JSON 的矩陣呈現明顯的區塊感
     reordered_labels = [clean_df.index[i] for i in g.dendrogram_row.reordered_ind]
     reordered_matrix = clean_df.loc[reordered_labels, reordered_labels]
     
-    # 格式化為前端矩陣圖格式
     matrix_data = {
         "z": reordered_matrix.values.tolist(), 
         "x": reordered_labels, 
-        "y": reordered_labels
+        "y": reordered_labels,
+        "is_weighted": True,
+        "reciprocity_setting": USE_RECIPROCITY_WEIGHTING
     }
     
-    # 輸出 matrix.json 至根目錄的 Output
-    with open(os.path.join(INPUT_DIR, 'matrix.json'), 'w', encoding='utf-8') as f:
+    # 儲存 JSON
+    output_json_path = os.path.join(INPUT_DIR, 'matrix.json')
+    with open(output_json_path, 'w', encoding='utf-8') as f:
         json.dump(matrix_data, f, ensure_ascii=False, indent=2)
 
-    # 設定標題與說明文字
-    g.fig.suptitle(f"網紅關聯強度矩陣 (已移除 {isolated_count} 位無連結網紅)", 
-                   fontsize=30, y=1.03, weight='bold')
-    
-    plt.gcf().text(0.5, 0.99, "關係強度指標 (0: 無關係, 1: 單向關注, 2: 雙向互粉)", 
-                   ha='center', fontsize=18, color='gray', style='italic')
-    
-    # 存檔
-    output_png = os.path.join(INPUT_DIR, 'influencer_clustered_heatmap.png')
-    g.savefig(output_png, dpi=300, bbox_inches='tight')
+    # 儲存圖片
+    output_png_path = os.path.join(INPUT_DIR, 'influencer_clustered_heatmap.png')
+    mode_text = "互惠加權模式" if USE_RECIPROCITY_WEIGHTING else "廣義生活圈模式"
+    g.fig.suptitle(f"網紅互動加權熱圖 - {mode_text}\n(排除 {isolated_count} 位無互動者)", fontsize=24, y=1.02)
+    plt.savefig(output_png_path, bbox_inches='tight', dpi=150)
     plt.close()
-    
-    print(f"成功：熱圖已儲存至 {output_png}，矩陣數據已儲存至 matrix.json。")
 
-# ==========================================
-# 執行
-# ==========================================
+    print("-" * 30)
+    print(f"階段 05-2 完成。熱力圖已存至: {output_png_path}")
+
 if __name__ == "__main__":
     generate_clustered_heatmap_and_json()

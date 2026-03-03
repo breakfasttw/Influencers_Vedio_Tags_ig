@@ -1,154 +1,81 @@
-# 產製圈內追蹤關係 edge 表格
-# input 1 = ignore/following_list 資料夾內的 {網紅id name}-Following.csv
-# input 2 = 中文名稱 與  {網紅id name} 對應表
+# 產製圈內標記關係 edge 表格
+# input 1 = influencer_tag_count_final.csv (標記次數統計表)
+# input 2 = Aisa100_ig.csv (母體名單，用來確保只分析圈內人)
 
-# output edge表、總追蹤數
-# username_edge_list.csv
-# username_total_following.csv
-
+# output edge表、自我標記統計
+# username_edge_list.csv (包含 count 權重)
+# self_promotion_stats.csv (紀錄網紅 tag 自己的次數)
 
 import pandas as pd
 import os
-import re
+from config import *
 
 # ==========================================
-# 1. 參數設定
+# 1. 參數設定 (維持彈性維護路徑)
 # ==========================================
-MASTER_LIST_PATH = 'Aisa100_ig.csv'
-INPUT_DIR = 'ignore/following_list'
-OUTPUT_DIR = 'Output'
+# 沿用原本變數名稱，但對應本次專案檔案
+INPUT_FILENAME = 'influencer_tag_count_final.csv'
 OUTPUT_FILENAME = 'username_edge_list.csv'
-TOTAL_FOLLOWING_FILENAME = 'username_total_following.csv'
+SELF_PROMO_FILENAME = 'self_promotion_stats.csv'
 
-
-if not os.path.exists(OUTPUT_DIR):
-    os.makedirs(OUTPUT_DIR)
+if not os.path.exists(INPUT_DIR):
+    os.makedirs(INPUT_DIR)
 
 def solve_phase_1():
-    # ==========================================
-    # 2. 讀取母體名單並建立映射 (Mapping)
-    # ==========================================
+    print("--- 修正執行 02-1：產製標記關係邊名單 (對調對象 + 加總去重版) ---")
+    
+    # 2. 讀取母體名單
     if not os.path.exists(MASTER_LIST_PATH):
         print(f"錯誤：找不到檔案 {MASTER_LIST_PATH}")
         return
-
-    # 讀取檔案
     master_df = pd.read_csv(MASTER_LIST_PATH)
-    
-    # [關鍵防錯]：去除欄位名稱的前後空格 (例如將 "ig_id " 轉為 "ig_id")
     master_df.columns = master_df.columns.str.strip()
-    
-    # 檢查必要欄位是否存在
-    required_cols = ['person_name', 'ig_id']
-    for col in required_cols:
-        if col not in master_df.columns:
-            print(f"錯誤：母體檔案中找不到 '{col}' 欄位。目前的欄位有: {master_df.columns.tolist()}")
-            return
+    influencer_set = set(master_df['person_name'].astype(str).str.strip())
 
-    # [關鍵清理]：
-    # 1. 將 ig_id 內容去空格並轉小寫
-    # 2. 將 person_name 空格換成 "-"
-    master_df['clean_ig_id'] = master_df['ig_id'].astype(str).str.strip().str.lower()
-    # 使用正則表達式 [ ,，]+ 匹配：空格、半形逗號、全形逗號 (可匹配一個或多個)
-    master_df['clean_person_name'] = master_df['person_name'].astype(str).str.replace(r'[ ,，]+', '-', regex=True)
-    # master_df['clean_person_name'] = master_df['person_name'].astype(str).str.replace(' ', '-', regex=False)
-    
-    # 建立映射表：{ '帳號': '清理後的姓名' }
-    id_to_person_map = dict(zip(master_df['clean_ig_id'], master_df['clean_person_name']))
-    valid_ids = set(id_to_person_map.keys())
-
-    # ==========================================
-    # 3. 掃描 Following 資料夾
-    # ==========================================
-    all_edges = []
-
-    # [新增需求]：建立統計追蹤總數的字典
-    # 結構: { '蔡阿嘎': {'ids': set(), 'origin_count': 0} }
-    total_stats = {}
-    
-    if not os.path.exists(INPUT_DIR):
-        print(f"錯誤：找不到資料夾 {INPUT_DIR}")
+    # 3. 處理標記數據
+    if not os.path.exists(INPUT_FILENAME):
+        print(f"錯誤：找不到檔案 {INPUT_FILENAME}")
         return
+    tag_df = pd.read_csv(INPUT_FILENAME)
+    tag_df['person_name'] = tag_df['person_name'].astype(str).str.strip()
+    tag_df['tagger_person_name'] = tag_df['tagger_person_name'].astype(str).str.strip()
 
-    files = [f for f in os.listdir(INPUT_DIR) if f.endswith('.csv')]
-    print(f"預計處理 {len(files)} 個檔案...")
+    # --- [修正點]：判定自我標記與圈內過濾 ---
+    edge_df = tag_df[
+        (tag_df['tagger_person_name'] != tag_df['person_name']) & 
+        (tag_df['tagger_person_name'].isin(influencer_set)) &
+        (tag_df['person_name'].isin(influencer_set))
+    ].copy()
 
-    for filename in files:
-        # 提取檔名第一個橫槓前的字串作為 source_id
-        source_id = filename.split('-Following')[0]
-        # source_id = filename.split('-')[0].strip().lower()
+    # --- [修正點]：根據你的要求對調 source/target ---
+    # person_name -> source (發起標記者)
+    # tagger_person_name -> target (接收標記者)
+    edge_df = edge_df.rename(columns={
+        'person_name': 'source',
+        'tagger_person_name': 'target',
+        'count': 'count'
+    })[['source', 'target', 'count']]
 
-        if source_id not in id_to_person_map:
-            continue
-        
-        # 驗證此帳號是否在母體內
-        if source_id not in valid_ids:
-            # 除錯資訊：如果還是失敗，印出此 ID 讓使用者確認
-            print(f"跳過：{filename} (提取到的 ID '{source_id}' 不在母體清單中)")
-            continue
-            
-        source_name = id_to_person_map[source_id]
-        # [新增需求]：初始化該網紅的統計資料
-        if source_name not in total_stats:
-            total_stats[source_name] = {'ids': set(), 'origin_count': 0}
+    # --- [關鍵新增]：加總重複的邊 ---
+    # 若對調後出現相同的 (source, target) 對象，將其 count 加總
+    edge_df = edge_df.groupby(['source', 'target'], as_index=False)['count'].sum()
+    
+    # 排序
+    edge_df = edge_df.sort_values(by='source', ascending=True)
 
-        try:
-            # 讀取該網紅追蹤的人，只取 username 欄位
-            # [修改]：讀取時多取 ig_user_id 以便進行去重統計
-            following_df = pd.read_csv(os.path.join(INPUT_DIR, filename), usecols=['username', 'ig_user_id'])
-            
-            # --- [新增需求邏輯：統計總追蹤人數] ---
-            # 直接累加 row 數量
-            total_stats[source_name]['origin_count'] += len(following_df)
-            # 將 ig_user_id 轉為字串並去除空值，存入 set 進行自動去重 (跨帳號合併)
-            valid_user_ids = following_df['ig_user_id'].dropna().astype(str).unique()
-            total_stats[source_name]['ids'].update(valid_user_ids)
+    # 處理自我標記
+    self_promo_df = tag_df[tag_df['tagger_person_name'] == tag_df['person_name']].copy()
+    self_promo_df = self_promo_df[['person_name', 'count']].rename(columns={'count': 'self_tag_count'})
 
-            # 清理追蹤清單中的帳號
-            following_df['username'] = following_df['username'].astype(str).str.strip().str.lower()
-            
-            # 過濾：只保留追蹤對象也在母體名單內的紀錄 (圈內互動)
-            in_circle = following_df[following_df['username'].isin(valid_ids)].copy()
-            
-            for target_id in in_circle['username']:
-                target_name = id_to_person_map[target_id]
-                
-                # 排除自己追蹤自己（若有分帳則會保留）
-                if source_name != target_name:
-                    all_edges.append({
-                        'source': source_name,
-                        'target': target_name
-                    })
-                    
-        except Exception as e:
-            print(f"讀取檔案 {filename} 時發生錯誤: {e}")
-
-    # ==========================================
-    # 4. 去重並產出 CSV
-    # ==========================================
-    edge_df = pd.DataFrame(all_edges).drop_duplicates() # 處理多個小帳追蹤同一主帳
-    edge_save_path = os.path.join(OUTPUT_DIR, OUTPUT_FILENAME)
+    # 4. 產出 CSV
+    edge_save_path = os.path.join(INPUT_DIR, OUTPUT_FILENAME)
     edge_df.to_csv(edge_save_path, index=False, encoding='utf-8-sig')
+    
+    self_save_path = os.path.join(INPUT_DIR, SELF_PROMO_FILENAME)
+    self_promo_df.to_csv(self_save_path, index=False, encoding='utf-8-sig')
+
     print("-" * 30)
-    print(f"階段 1-1 完成：邊名單已儲存至 {edge_save_path}")
-    print(f"產生的關係總數 (Edge count): {len(edge_df)}")
-    
-    # ==========================================
-    # 5. [新增需求] 產出 username_total_following.csv
-    # ==========================================
-    total_following_rows = []
-    for name, data in total_stats.items():
-        total_following_rows.append({
-            'source': name,
-            'distinct_following': len(data['ids']),
-            'origin_following': data['origin_count']
-        })
-    
-    total_df = pd.DataFrame(total_following_rows)
-    total_save_path = os.path.join(OUTPUT_DIR, TOTAL_FOLLOWING_FILENAME)
-    total_df.to_csv(total_save_path, index=False, encoding='utf-8-sig')
-    print(f"階段 1-2 完成：總追蹤統計已儲存至 {total_save_path}")
-    print(f"執行完畢！")
+    print(f"階段 02-1 完成。互動總量: {edge_df['count'].sum()} 次")
 
 if __name__ == "__main__":
     solve_phase_1()

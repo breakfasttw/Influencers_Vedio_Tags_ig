@@ -14,7 +14,7 @@ FONT_SETTING = ['Iansui', 'Microsoft JhengHei', 'Arial Unicode MS', 'sans-serif'
 # 1. 路徑設定
 # ==========================================
 INPUT_DIR = 'Output'
-MASTER_LIST_PATH = 'Aisa100_ig.csv'
+MASTER_LIST_PATH = 'AisaTop200.csv'
 EDGE_LIST_PATH = os.path.join(INPUT_DIR, 'username_edge_list.csv')
 TOTAL_FOLLOWING_PATH = os.path.join(INPUT_DIR, 'username_total_following.csv')
 RECIP_MATRIX_PATH = os.path.join(INPUT_DIR, 'influencer_reciprocity_matrix.csv')
@@ -39,3 +39,9 @@ ALGO_CONFIG = {
         'label': ''
     }
 }
+
+# ==========================================
+# 3. 是否加入互惠係數
+# 決定本次分析【要引入互惠係數(細膩捕捉互動事實)】或是【不引入互惠係數 (有效區分廣義上的生活圈)】?
+# ==========================================
+USE_RECIPROCITY_WEIGHTING = True
