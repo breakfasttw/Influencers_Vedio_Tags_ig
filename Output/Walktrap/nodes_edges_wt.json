@@ -3,1624 +3,1532 @@
     {
       "id": "蔡阿嘎",
       "name": "蔡阿嘎",
-      "group": "A",
-      "color": "#45B7D1",
-      "val": 19.25,
+      "group": "I",
+      "color": "#F7A0C0",
+      "val": 48.5,
+      "metrics": {
+        "in_degree": 146,
+        "out_degree": 50,
+        "mutual": 3,
+        "Following": 501,
+        "Followers": 1495461,
+        "posts": 8178
+      },
+      "between_centrality": 0.005051,
       "category": "趣味搞笑"
     },
     {
       "id": "Joeman",
       "name": "Joeman",
-      "group": "B",
-      "color": "#FFA07A",
-      "val": 1.375,
+      "group": "E",
+      "color": "#BB8FCE",
+      "val": 12.75,
+      "metrics": {
+        "in_degree": 3,
+        "out_degree": 8,
+        "mutual": 1,
+        "Following": 996,
+        "Followers": 666819,
+        "posts": 1615
+      },
+      "between_centrality": 0.001777,
       "category": "美食料理,3C科技,趣味搞笑"
-    },
-    {
-      "id": "黃阿瑪的後宮生活",
-      "name": "黃阿瑪的後宮生活",
-      "group": "C",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "寵物"
     },
     {
       "id": "千千進食中",
       "name": "千千進食中",
-      "group": "D",
-      "color": "#58E751",
-      "val": 2.125,
+      "group": "A",
+      "color": "#45B7D1",
+      "val": 14.25,
+      "metrics": {
+        "in_degree": 9,
+        "out_degree": 3,
+        "mutual": 2,
+        "Following": 974,
+        "Followers": 891802,
+        "posts": 1002
+      },
+      "between_centrality": 0.0036,
       "category": "美食料理"
-    },
-    {
-      "id": "小象愛出門",
-      "name": "小象愛出門",
-      "group": "E",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "美食料理,旅遊"
-    },
-    {
-      "id": "那對夫妻",
-      "name": "那對夫妻",
-      "group": "F",
-      "color": "#FF6B6B",
-      "val": 1.0,
-      "category": "趣味搞笑,家庭母嬰,表演藝術"
     },
     {
       "id": "How-Fun-如何爽",
       "name": "How-Fun-如何爽",
-      "group": "G",
-      "color": "#5968EE",
-      "val": 1.25,
+      "group": "J",
+      "color": "#B5BCB2",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 2,
+        "mutual": 2,
+        "Following": 103,
+        "Followers": 523443,
+        "posts": 1921
+      },
+      "between_centrality": 0.0,
       "category": "趣味搞笑"
-    },
-    {
-      "id": "PanSci-泛科學",
-      "name": "PanSci-泛科學",
-      "group": "H",
-      "color": "#78724F",
-      "val": 1.0,
-      "category": "知識教育"
     },
     {
       "id": "一隻阿圓",
       "name": "一隻阿圓",
-      "group": "I",
-      "color": "#F7A0C0",
-      "val": 5.0,
+      "group": "B",
+      "color": "#FFA07A",
+      "val": 20.0,
+      "metrics": {
+        "in_degree": 32,
+        "out_degree": 2,
+        "mutual": 1,
+        "Following": 593,
+        "Followers": 563686,
+        "posts": 3373
+      },
+      "between_centrality": 0.007377,
       "category": "美妝保養,時尚潮流,旅遊"
-    },
-    {
-      "id": "欸你這週要幹嘛",
-      "name": "欸你這週要幹嘛",
-      "group": "J",
-      "color": "#B6B5AE",
-      "val": 1.0,
-      "category": "趣味搞笑"
     },
     {
       "id": "77老大",
       "name": "77老大",
-      "group": "K",
-      "color": "#45B7D1",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 591,
+        "Followers": 395721,
+        "posts": 1054
+      },
+      "between_centrality": 0.0,
       "category": "醫療健康,知識教育"
     },
     {
       "id": "那個女生-Kiki",
       "name": "那個女生-Kiki",
-      "group": "I",
-      "color": "#F7A0C0",
-      "val": 1.0,
+      "group": "B",
+      "color": "#FFA07A",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 3,
+        "mutual": 0,
+        "Following": 511,
+        "Followers": 289658,
+        "posts": 1099
+      },
+      "between_centrality": 0.0,
       "category": "美食料理,知識教育"
     },
     {
       "id": "阿滴英文",
       "name": "阿滴英文",
-      "group": "L",
-      "color": "#FFA07A",
-      "val": 2.75,
+      "group": "F",
+      "color": "#FF6B6B",
+      "val": 15.5,
+      "metrics": {
+        "in_degree": 14,
+        "out_degree": 38,
+        "mutual": 2,
+        "Following": 2228,
+        "Followers": 1089513,
+        "posts": 1570
+      },
+      "between_centrality": 0.006425,
       "category": "知識教育"
-    },
-    {
-      "id": "好味小姐",
-      "name": "好味小姐",
-      "group": "M",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "美食料理,寵物"
     },
     {
       "id": "廉傑克曼",
       "name": "廉傑克曼",
-      "group": "G",
-      "color": "#5968EE",
-      "val": 1.25,
+      "group": "J",
+      "color": "#B5BCB2",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 5,
+        "mutual": 2,
+        "Following": 4032,
+        "Followers": 415002,
+        "posts": 1855
+      },
+      "between_centrality": 0.001624,
       "category": "遊戲電玩"
     },
     {
       "id": "江老師",
       "name": "江老師",
-      "group": "N",
-      "color": "#58E751",
-      "val": 1.375,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.75,
+      "metrics": {
+        "in_degree": 3,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 624,
+        "Followers": 308786,
+        "posts": 1922
+      },
+      "between_centrality": 5.1e-05,
       "category": "表演藝術,時尚潮流,家庭母嬰"
-    },
-    {
-      "id": "那些電影教我的事",
-      "name": "那些電影教我的事",
-      "group": "O",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "影視評論"
-    },
-    {
-      "id": "豆漿--Soybean-Milk",
-      "name": "豆漿--Soybean-Milk",
-      "group": "P",
-      "color": "#FF6B6B",
-      "val": 1.0,
-      "category": "寵物"
     },
     {
       "id": "Onion-man-洋蔥先生與阿文",
       "name": "Onion-man-洋蔥先生與阿文",
-      "group": "Q",
-      "color": "#5968EE",
-      "val": 3.5,
+      "group": "C",
+      "color": "#F7DC6F",
+      "val": 17.0,
+      "metrics": {
+        "in_degree": 20,
+        "out_degree": 4,
+        "mutual": 2,
+        "Following": 925,
+        "Followers": 458424,
+        "posts": 1177
+      },
+      "between_centrality": 0.00343,
       "category": "表演藝術,趣味搞笑"
     },
     {
       "id": "人類超有病-Baxuan",
       "name": "人類超有病-Baxuan",
-      "group": "R",
-      "color": "#78724F",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 2830,
+        "Followers": 742233,
+        "posts": 1066
+      },
+      "between_centrality": 0.0,
       "category": "表演藝術,趣味搞笑"
     },
     {
       "id": "大蛇丸",
       "name": "大蛇丸",
-      "group": "Q",
-      "color": "#5968EE",
-      "val": 1.0,
+      "group": "C",
+      "color": "#F7DC6F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 19,
+        "mutual": 0,
+        "Following": 390,
+        "Followers": 551530,
+        "posts": 882
+      },
+      "between_centrality": 0.0,
       "category": "趣味搞笑"
-    },
-    {
-      "id": "Andy老師",
-      "name": "Andy老師",
-      "group": "S",
-      "color": "#F7A0C0",
-      "val": 1.0,
-      "category": "趣味搞笑,表演藝術"
-    },
-    {
-      "id": "超認真少年-I'm-Serious",
-      "name": "超認真少年-I'm-Serious",
-      "group": "T",
-      "color": "#B6B5AE",
-      "val": 1.0,
-      "category": "知識教育"
-    },
-    {
-      "id": "三原慧悟-Sanyuan_JAPAN",
-      "name": "三原慧悟-Sanyuan_JAPAN",
-      "group": "U",
-      "color": "#45B7D1",
-      "val": 1.0,
-      "category": "旅遊,趣味搞笑"
     },
     {
       "id": "貓貓蟲-咖波",
       "name": "貓貓蟲-咖波",
-      "group": "L",
-      "color": "#FFA07A",
-      "val": 1.0,
+      "group": "F",
+      "color": "#FF6B6B",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 291,
+        "Followers": 2136350,
+        "posts": 1735
+      },
+      "between_centrality": 0.0,
       "category": "表演藝術"
     },
     {
       "id": "Ian&Eric",
       "name": "Ian&Eric",
-      "group": "D",
-      "color": "#58E751",
-      "val": 1.625,
+      "group": "A",
+      "color": "#45B7D1",
+      "val": 13.25,
+      "metrics": {
+        "in_degree": 5,
+        "out_degree": 2,
+        "mutual": 0,
+        "Following": 482,
+        "Followers": 609185,
+        "posts": 1101
+      },
+      "between_centrality": 0.002589,
       "category": "旅遊,趣味搞笑"
     },
     {
       "id": "黃氏兄弟",
       "name": "黃氏兄弟",
-      "group": "V",
-      "color": "#FFA07A",
-      "val": 2.375,
+      "group": "D",
+      "color": "#58E751",
+      "val": 14.75,
+      "metrics": {
+        "in_degree": 11,
+        "out_degree": 10,
+        "mutual": 1,
+        "Following": 2,
+        "Followers": 454084,
+        "posts": 476
+      },
+      "between_centrality": 0.006599,
       "category": "趣味搞笑,表演藝術"
     },
     {
       "id": "我得了一種吃菜就會死的病-微疼",
       "name": "我得了一種吃菜就會死的病-微疼",
-      "group": "W",
-      "color": "#F7DC6F",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 1071,
+        "Followers": 322374,
+        "posts": 1429
+      },
+      "between_centrality": 0.0,
       "category": "表演藝術,趣味搞笑"
     },
     {
       "id": "琳妲-林羿禎",
       "name": "琳妲-林羿禎",
-      "group": "X",
-      "color": "#58E751",
-      "val": 1.125,
+      "group": "K",
+      "color": "#8984CF",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 5,
+        "mutual": 1,
+        "Following": 2416,
+        "Followers": 1036871,
+        "posts": 5232
+      },
+      "between_centrality": 0.000102,
       "category": "表演藝術,趣味搞笑"
     },
     {
       "id": "白癡公主",
       "name": "白癡公主",
-      "group": "Y",
-      "color": "#BB8FCE",
-      "val": 1.25,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 3,
+        "mutual": 1,
+        "Following": 515,
+        "Followers": 1002519,
+        "posts": 1801
+      },
+      "between_centrality": 0.00231,
       "category": "趣味搞笑"
-    },
-    {
-      "id": "KEOKI-BLACK布萊克薛薛",
-      "name": "KEOKI-BLACK布萊克薛薛",
-      "group": "Z",
-      "color": "#FF6B6B",
-      "val": 1.0,
-      "category": "旅遊,美食料理"
-    },
-    {
-      "id": "厭世甜點店",
-      "name": "厭世甜點店",
-      "group": "[",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "美食料理"
     },
     {
       "id": "陳彥婷",
       "name": "陳彥婷",
-      "group": "\\",
-      "color": "#78724F",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 352,
+        "Followers": 642973,
+        "posts": 2147
+      },
+      "between_centrality": 5.1e-05,
       "category": "趣味搞笑"
     },
     {
       "id": "魚乾",
       "name": "魚乾",
-      "group": "]",
-      "color": "#F7A0C0",
-      "val": 1.5,
+      "group": "G",
+      "color": "#5968EE",
+      "val": 13.0,
+      "metrics": {
+        "in_degree": 4,
+        "out_degree": 3,
+        "mutual": 1,
+        "Following": 500,
+        "Followers": 350257,
+        "posts": 1809
+      },
+      "between_centrality": 0.000609,
       "category": "寵物,遊戲電玩,趣味搞笑"
     },
     {
       "id": "志祺七七",
       "name": "志祺七七",
-      "group": "Q",
-      "color": "#5968EE",
-      "val": 1.125,
+      "group": "F",
+      "color": "#FF6B6B",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 552,
+        "Followers": 238862,
+        "posts": 1093
+      },
+      "between_centrality": 0.000863,
       "category": "知識教育,時事討論,高階經理人"
     },
     {
       "id": "HOOK",
       "name": "HOOK",
-      "group": "L",
-      "color": "#FFA07A",
-      "val": 1.25,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 448,
+        "Followers": 648553,
+        "posts": 1154
+      },
+      "between_centrality": 0.0,
       "category": "寵物,旅遊,美食料理"
     },
     {
       "id": "木曜4超玩",
       "name": "木曜4超玩",
-      "group": "Q",
-      "color": "#5968EE",
-      "val": 1.25,
+      "group": "C",
+      "color": "#F7DC6F",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 71,
+        "Followers": 342007,
+        "posts": 817
+      },
+      "between_centrality": 0.0,
       "category": "旅遊"
-    },
-    {
-      "id": "丹妮婊姐",
-      "name": "丹妮婊姐",
-      "group": "^",
-      "color": "#B6B5AE",
-      "val": 1.0,
-      "category": "美妝保養,時尚潮流,趣味搞笑"
-    },
-    {
-      "id": "泱泱LYNN",
-      "name": "泱泱LYNN",
-      "group": "_",
-      "color": "#45B7D1",
-      "val": 1.0,
-      "category": "帶貨分潤"
     },
     {
       "id": "HahaTai-哈哈台",
       "name": "HahaTai-哈哈台",
-      "group": "`",
-      "color": "#FFA07A",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 1092,
+        "Followers": 335359,
+        "posts": 2719
+      },
+      "between_centrality": 5.1e-05,
       "category": "趣味搞笑"
-    },
-    {
-      "id": "丁特-Dinter",
-      "name": "丁特-Dinter",
-      "group": "a",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "遊戲電玩"
     },
     {
       "id": "彼得爸與蘇珊媽",
       "name": "彼得爸與蘇珊媽",
-      "group": "V",
-      "color": "#FFA07A",
-      "val": 1.125,
+      "group": "D",
+      "color": "#58E751",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 1267,
+        "Followers": 115573,
+        "posts": 3181
+      },
+      "between_centrality": 0.0,
       "category": "旅遊,家庭母嬰,帶貨分潤"
     },
     {
       "id": "阿翰po影片",
       "name": "阿翰po影片",
-      "group": "D",
-      "color": "#58E751",
-      "val": 1.0,
+      "group": "A",
+      "color": "#45B7D1",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 5,
+        "mutual": 0,
+        "Following": 1782,
+        "Followers": 663533,
+        "posts": 714
+      },
+      "between_centrality": 0.0,
       "category": "趣味搞笑"
-    },
-    {
-      "id": "愛里",
-      "name": "愛里",
-      "group": "b",
-      "color": "#58E751",
-      "val": 1.0,
-      "category": "知識教育,趣味搞笑"
     },
     {
       "id": "這群人-尼克",
       "name": "這群人-尼克",
-      "group": "I",
-      "color": "#F7A0C0",
-      "val": 1.125,
+      "group": "B",
+      "color": "#FFA07A",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 6,
+        "mutual": 0,
+        "Following": 646,
+        "Followers": 422848,
+        "posts": 2358
+      },
+      "between_centrality": 0.00033,
       "category": "趣味搞笑,表演藝術"
     },
     {
       "id": "蔡桃貴",
       "name": "蔡桃貴",
-      "group": "A",
-      "color": "#45B7D1",
-      "val": 1.125,
+      "group": "I",
+      "color": "#F7A0C0",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 33,
+        "mutual": 1,
+        "Following": 61,
+        "Followers": 1150147,
+        "posts": 4238
+      },
+      "between_centrality": 0.0,
       "category": "家庭母嬰,趣味搞笑"
-    },
-    {
-      "id": "Ru's-Piano-Ru味春捲",
-      "name": "Ru's-Piano-Ru味春捲",
-      "group": "c",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "表演藝術"
     },
     {
       "id": "阿啾繪圖同萌",
       "name": "阿啾繪圖同萌",
-      "group": "d",
-      "color": "#FF6B6B",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 489,
+        "Followers": 11113,
+        "posts": 113
+      },
+      "between_centrality": 0.0,
       "category": "表演藝術,趣味搞笑"
     },
     {
       "id": "黃大謙",
       "name": "黃大謙",
-      "group": "L",
-      "color": "#FFA07A",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 3,
+        "mutual": 0,
+        "Following": 493,
+        "Followers": 522301,
+        "posts": 493
+      },
+      "between_centrality": 0.000871,
       "category": "趣味搞笑"
-    },
-    {
-      "id": "愛莉莎莎-Alisasa",
-      "name": "愛莉莎莎-Alisasa",
-      "group": "e",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "美妝保養,時尚潮流"
     },
     {
       "id": "見習網美小吳",
       "name": "見習網美小吳",
-      "group": "f",
-      "color": "#78724F",
-      "val": 1.5,
+      "group": "L",
+      "color": "#D9CB9B",
+      "val": 13.0,
+      "metrics": {
+        "in_degree": 4,
+        "out_degree": 4,
+        "mutual": 1,
+        "Following": 770,
+        "Followers": 760960,
+        "posts": 1739
+      },
+      "between_centrality": 0.000812,
       "category": "美妝保養,趣味搞笑"
-    },
-    {
-      "id": "Charlene-Liu-查理",
-      "name": "Charlene-Liu-查理",
-      "group": "g",
-      "color": "#F7A0C0",
-      "val": 1.0,
-      "category": "美妝保養,時尚潮流,旅遊"
     },
     {
       "id": "PEETA葛格",
       "name": "PEETA葛格",
-      "group": "I",
-      "color": "#F7A0C0",
-      "val": 1.375,
+      "group": "A",
+      "color": "#45B7D1",
+      "val": 12.75,
+      "metrics": {
+        "in_degree": 3,
+        "out_degree": 5,
+        "mutual": 1,
+        "Following": 1832,
+        "Followers": 267433,
+        "posts": 873
+      },
+      "between_centrality": 0.005964,
       "category": "運動健身"
-    },
-    {
-      "id": "波蘭女孩x台灣男孩-在家環遊世界",
-      "name": "波蘭女孩x台灣男孩-在家環遊世界",
-      "group": "h",
-      "color": "#B6B5AE",
-      "val": 1.0,
-      "category": "旅遊,美食料理"
     },
     {
       "id": "連環泡有芒果",
       "name": "連環泡有芒果",
-      "group": "i",
-      "color": "#45B7D1",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 24,
+        "mutual": 0,
+        "Following": 10,
+        "Followers": 218465,
+        "posts": 2043
+      },
+      "between_centrality": 0.0,
       "category": "美食料理,寵物,趣味搞笑"
-    },
-    {
-      "id": "Emma艾瑪",
-      "name": "Emma艾瑪",
-      "group": "j",
-      "color": "#FFA07A",
-      "val": 1.0,
-      "category": "運動健身"
     },
     {
       "id": "Aries艾瑞絲",
       "name": "Aries艾瑞絲",
-      "group": "k",
-      "color": "#F7DC6F",
-      "val": 1.25,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 943,
+        "Followers": 779766,
+        "posts": 2044
+      },
+      "between_centrality": 0.0,
       "category": "美食料理,表演藝術,趣味搞笑"
-    },
-    {
-      "id": "蘿潔塔的廚房",
-      "name": "蘿潔塔的廚房",
-      "group": "l",
-      "color": "#58E751",
-      "val": 1.0,
-      "category": "美食料理,帶貨分潤"
     },
     {
       "id": "瑀熙-Yuci",
       "name": "瑀熙-Yuci",
-      "group": "m",
-      "color": "#BB8FCE",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 624,
+        "Followers": 1031037,
+        "posts": 2996
+      },
+      "between_centrality": 5.1e-05,
       "category": "旅遊,遊戲電玩"
     },
     {
       "id": "這群人TGOP",
       "name": "這群人TGOP",
-      "group": "n",
-      "color": "#FF6B6B",
-      "val": 1.25,
+      "group": "H",
+      "color": "#837B4D",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 2,
+        "mutual": 0,
+        "Following": 15,
+        "Followers": 634322,
+        "posts": 2377
+      },
+      "between_centrality": 0.000102,
       "category": "趣味搞笑"
     },
     {
       "id": "3cTim哥生活的日常",
       "name": "3cTim哥生活的日常",
-      "group": "B",
-      "color": "#FFA07A",
-      "val": 1.125,
+      "group": "E",
+      "color": "#BB8FCE",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 1,
+        "mutual": 1,
+        "Following": 486,
+        "Followers": 113102,
+        "posts": 2926
+      },
+      "between_centrality": 0.0,
       "category": "3C科技"
-    },
-    {
-      "id": "百變沛莉-Peri",
-      "name": "百變沛莉-Peri",
-      "group": "o",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "美妝保養,時尚潮流,家庭母嬰"
     },
     {
       "id": "鹿人",
       "name": "鹿人",
-      "group": "p",
-      "color": "#78724F",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 208,
+        "Followers": 415007,
+        "posts": 922
+      },
+      "between_centrality": 0.0,
       "category": "表演藝術,趣味搞笑"
     },
     {
       "id": "關韶文",
       "name": "關韶文",
-      "group": "q",
-      "color": "#F7A0C0",
-      "val": 1.375,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.75,
+      "metrics": {
+        "in_degree": 3,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 501,
+        "Followers": 367960,
+        "posts": 1929
+      },
+      "between_centrality": 0.0,
       "category": "美妝保養,趣味搞笑,表演藝術"
     },
     {
       "id": "健人蓋伊",
       "name": "健人蓋伊",
-      "group": "R",
-      "color": "#78724F",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 827,
+        "Followers": 262770,
+        "posts": 829
+      },
+      "between_centrality": 0.0,
       "category": "運動健身"
     },
     {
       "id": "GINA-HELLO!",
       "name": "GINA-HELLO!",
-      "group": "]",
-      "color": "#F7A0C0",
-      "val": 1.0,
+      "group": "G",
+      "color": "#5968EE",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 447,
+        "Followers": 525796,
+        "posts": 7076
+      },
+      "between_centrality": 0.0,
       "category": "美妝保養,時尚潮流,旅遊"
     },
     {
       "id": "我是老爸-我不要當爸!",
       "name": "我是老爸-我不要當爸!",
-      "group": "r",
-      "color": "#B6B5AE",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 301,
+        "Followers": 102766,
+        "posts": 554
+      },
+      "between_centrality": 0.0,
       "category": "旅遊,美食料理"
-    },
-    {
-      "id": "蛋事超有事EggThings",
-      "name": "蛋事超有事EggThings",
-      "group": "s",
-      "color": "#45B7D1",
-      "val": 1.0,
-      "category": "表演藝術"
-    },
-    {
-      "id": "雨揚樂活家族",
-      "name": "雨揚樂活家族",
-      "group": "t",
-      "color": "#FFA07A",
-      "val": 1.0,
-      "category": "綜合其他"
-    },
-    {
-      "id": "肉比頭Zoebitalk",
-      "name": "肉比頭Zoebitalk",
-      "group": "u",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "旅遊,知識教育"
     },
     {
       "id": "現在宅知道",
       "name": "現在宅知道",
-      "group": "v",
-      "color": "#58E751",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 81,
+        "Followers": 132212,
+        "posts": 2536
+      },
+      "between_centrality": 0.0,
       "category": "遊戲電玩"
-    },
-    {
-      "id": "人生肥宅x尊",
-      "name": "人生肥宅x尊",
-      "group": "w",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "趣味搞笑,遊戲電玩"
     },
     {
       "id": "啾啾妹-by-LIIN",
       "name": "啾啾妹-by-LIIN",
-      "group": "d",
-      "color": "#FF6B6B",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 217,
+        "Followers": 542737,
+        "posts": 1336
+      },
+      "between_centrality": 0.0,
       "category": "趣味搞笑,設計創作"
     },
     {
       "id": "閃電狼Flash-Wolves",
       "name": "閃電狼Flash-Wolves",
-      "group": "x",
-      "color": "#FF6B6B",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 3,
+        "mutual": 0,
+        "Following": 96,
+        "Followers": 100432,
+        "posts": 5489
+      },
+      "between_centrality": 0.0,
       "category": "遊戲電玩"
-    },
-    {
-      "id": "融融歷險記-Ben’s-Adventure",
-      "name": "融融歷險記-Ben’s-Adventure",
-      "group": "y",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "旅遊"
-    },
-    {
-      "id": "星期天",
-      "name": "星期天",
-      "group": "z",
-      "color": "#78724F",
-      "val": 1.0,
-      "category": "綜合其他"
     },
     {
       "id": "Yun-Chou",
       "name": "Yun-Chou",
-      "group": "\\",
-      "color": "#78724F",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 993,
+        "Followers": 834659,
+        "posts": 2961
+      },
+      "between_centrality": 0.0,
       "category": "家庭母嬰"
-    },
-    {
-      "id": "MaoMaoTV",
-      "name": "MaoMaoTV",
-      "group": "{",
-      "color": "#F7A0C0",
-      "val": 1.0,
-      "category": "旅遊"
     },
     {
       "id": "Evelyn-Chen-理科太太",
       "name": "Evelyn-Chen-理科太太",
-      "group": "Y",
-      "color": "#BB8FCE",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 1,
+        "mutual": 1,
+        "Following": 226,
+        "Followers": 573035,
+        "posts": 700
+      },
+      "between_centrality": 0.0,
       "category": "醫療健康,時事討論"
     },
     {
       "id": "小A辣",
       "name": "小A辣",
-      "group": "|",
-      "color": "#B6B5AE",
-      "val": 1.25,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 1,
+        "mutual": 1,
+        "Following": 1499,
+        "Followers": 354298,
+        "posts": 1744
+      },
+      "between_centrality": 0.0,
       "category": "趣味搞笑"
-    },
-    {
-      "id": "兔女狼",
-      "name": "兔女狼",
-      "group": "}",
-      "color": "#45B7D1",
-      "val": 1.0,
-      "category": "旅遊"
     },
     {
       "id": "有璟妍精요찡옌찡",
       "name": "有璟妍精요찡옌찡",
-      "group": "V",
-      "color": "#FFA07A",
-      "val": 1.125,
+      "group": "D",
+      "color": "#58E751",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 664,
+        "Followers": 216284,
+        "posts": 765
+      },
+      "between_centrality": 0.0,
       "category": "旅遊,美食料理"
     },
     {
       "id": "滴妹",
       "name": "滴妹",
-      "group": "L",
-      "color": "#FFA07A",
-      "val": 4.75,
-      "category": "旅遊,美食料理,知識教育"
-    },
-    {
-      "id": "莫彩曦Hailey",
-      "name": "莫彩曦Hailey",
-      "group": "~",
-      "color": "#FFA07A",
-      "val": 1.0,
-      "category": "綜合其他"
-    },
-    {
-      "id": "星光奈奈",
-      "name": "星光奈奈",
-      "group": "",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "旅遊,表演藝術"
-    },
-    {
-      "id": "Gary蓋瑞",
-      "name": "Gary蓋瑞",
-      "group": "",
-      "color": "#58E751",
-      "val": 1.0,
-      "category": "遊戲電玩"
-    },
-    {
-      "id": "Jason-Chen-陳以桐",
-      "name": "Jason-Chen-陳以桐",
-      "group": "",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "表演藝術"
-    },
-    {
-      "id": "台灣妞韓國媳",
-      "name": "台灣妞韓國媳",
-      "group": "",
+      "group": "F",
       "color": "#FF6B6B",
-      "val": 1.0,
-      "category": "美妝保養,旅遊,帶貨分潤"
-    },
-    {
-      "id": "cheap-鄭才暐",
-      "name": "cheap-鄭才暐",
-      "group": "",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "遊戲電玩,時事討論"
-    },
-    {
-      "id": "王宏哲教養、育兒寶典",
-      "name": "王宏哲教養、育兒寶典",
-      "group": "",
-      "color": "#78724F",
-      "val": 1.0,
-      "category": "家庭母嬰,知識教育,高階經理人"
+      "val": 19.5,
+      "metrics": {
+        "in_degree": 30,
+        "out_degree": 7,
+        "mutual": 1,
+        "Following": 1635,
+        "Followers": 739639,
+        "posts": 1173
+      },
+      "between_centrality": 0.0,
+      "category": "旅遊,美食料理,知識教育"
     },
     {
       "id": "小葵-XiaoKui",
       "name": "小葵-XiaoKui",
-      "group": "x",
-      "color": "#FF6B6B",
-      "val": 1.375,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.75,
+      "metrics": {
+        "in_degree": 3,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 764,
+        "Followers": 178445,
+        "posts": 1374
+      },
+      "between_centrality": 0.0,
       "category": "遊戲電玩"
-    },
-    {
-      "id": "High咖-邱志恒",
-      "name": "High咖-邱志恒",
-      "group": "",
-      "color": "#F7A0C0",
-      "val": 1.0,
-      "category": "趣味搞笑"
-    },
-    {
-      "id": "Lobo-蘿蔔",
-      "name": "Lobo-蘿蔔",
-      "group": "",
-      "color": "#B6B5AE",
-      "val": 1.0,
-      "category": "nan"
     },
     {
       "id": "黃小米-Mii",
       "name": "黃小米-Mii",
-      "group": "K",
-      "color": "#45B7D1",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 992,
+        "Followers": 232488,
+        "posts": 2940
+      },
+      "between_centrality": 0.0,
       "category": "美妝保養,時尚潮流,旅遊"
-    },
-    {
-      "id": "鼻妹的廢話亂畫",
-      "name": "鼻妹的廢話亂畫",
-      "group": "",
-      "color": "#45B7D1",
-      "val": 1.0,
-      "category": "表演藝術,趣味搞笑"
-    },
-    {
-      "id": "Sandy-珊迪",
-      "name": "Sandy-珊迪",
-      "group": "",
-      "color": "#FFA07A",
-      "val": 1.0,
-      "category": "美食料理,寵物,遊戲電玩"
     },
     {
       "id": "魔術Channel---Davio",
       "name": "魔術Channel---Davio",
-      "group": "f",
-      "color": "#78724F",
-      "val": 1.125,
+      "group": "L",
+      "color": "#D9CB9B",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 682,
+        "Followers": 351680,
+        "posts": 2093
+      },
+      "between_centrality": 0.0,
       "category": "表演藝術"
-    },
-    {
-      "id": "可可酒精",
-      "name": "可可酒精",
-      "group": "",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "美食料理,趣味搞笑"
-    },
-    {
-      "id": "吃貨豪豪",
-      "name": "吃貨豪豪",
-      "group": "",
-      "color": "#58E751",
-      "val": 1.0,
-      "category": "美食料理"
-    },
-    {
-      "id": "電瀨少女-女孩的科技日常",
-      "name": "電瀨少女-女孩的科技日常",
-      "group": "",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "3C科技"
     },
     {
       "id": "恩熙俊-aka-MC-Jeng",
       "name": "恩熙俊-aka-MC-Jeng",
-      "group": "",
-      "color": "#FF6B6B",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 804,
+        "Followers": 213786,
+        "posts": 627
+      },
+      "between_centrality": 0.0,
       "category": "美食料理"
     },
     {
       "id": "崔&雪莉&Jon",
       "name": "崔&雪莉&Jon",
-      "group": "`",
-      "color": "#FFA07A",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 1204,
+        "Followers": 43946,
+        "posts": 455
+      },
+      "between_centrality": 0.0,
       "category": "影視評論"
     },
     {
       "id": "鐵牛-Ironbull",
       "name": "鐵牛-Ironbull",
-      "group": "W",
-      "color": "#F7DC6F",
-      "val": 1.25,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 1168,
+        "Followers": 120088,
+        "posts": 1556
+      },
+      "between_centrality": 0.0,
       "category": "遊戲電玩,趣味搞笑"
     },
     {
       "id": "小尾巴",
       "name": "小尾巴",
-      "group": "B",
-      "color": "#FFA07A",
-      "val": 1.0,
+      "group": "E",
+      "color": "#BB8FCE",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 446,
+        "Followers": 134393,
+        "posts": 983
+      },
+      "between_centrality": 0.0,
       "category": "表演藝術,遊戲電玩,趣味搞笑"
     },
     {
       "id": "蔡哥",
       "name": "蔡哥",
-      "group": "D",
-      "color": "#58E751",
-      "val": 2.25,
+      "group": "A",
+      "color": "#45B7D1",
+      "val": 14.5,
+      "metrics": {
+        "in_degree": 10,
+        "out_degree": 8,
+        "mutual": 4,
+        "Following": 1959,
+        "Followers": 241128,
+        "posts": 1368
+      },
+      "between_centrality": 0.012762,
       "category": "表演藝術,趣味搞笑"
-    },
-    {
-      "id": "Ciao!-Kitchen",
-      "name": "Ciao!-Kitchen",
-      "group": "",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "美食料理"
-    },
-    {
-      "id": "超粒方",
-      "name": "超粒方",
-      "group": "",
-      "color": "#78724F",
-      "val": 1.0,
-      "category": "影視評論"
     },
     {
       "id": "Sandy-&-Mandy",
       "name": "Sandy-&-Mandy",
-      "group": "",
-      "color": "#F7A0C0",
-      "val": 1.0,
-      "category": "表演藝術"
-    },
-    {
-      "id": "麻糬爸",
-      "name": "麻糬爸",
-      "group": "",
-      "color": "#B6B5AE",
-      "val": 1.0,
+      "group": "B",
+      "color": "#FFA07A",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 248,
+        "Followers": 519307,
+        "posts": 586
+      },
+      "between_centrality": 0.0,
       "category": "表演藝術"
     },
     {
       "id": "Six-Wang",
       "name": "Six-Wang",
-      "group": "v",
-      "color": "#58E751",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 447,
+        "Followers": 236458,
+        "posts": 2155
+      },
+      "between_centrality": 0.0,
       "category": "遊戲電玩"
-    },
-    {
-      "id": "Lilyflute長笛姐姐",
-      "name": "Lilyflute長笛姐姐",
-      "group": "",
-      "color": "#45B7D1",
-      "val": 1.0,
-      "category": "表演藝術"
-    },
-    {
-      "id": "Wecook123-料理123",
-      "name": "Wecook123-料理123",
-      "group": "",
-      "color": "#FFA07A",
-      "val": 1.0,
-      "category": "美食料理"
     },
     {
       "id": "林進-飛醺卑鄙-fashion-baby",
       "name": "林進-飛醺卑鄙-fashion-baby",
-      "group": "|",
-      "color": "#B6B5AE",
-      "val": 1.25,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 4,
+        "mutual": 2,
+        "Following": 2244,
+        "Followers": 722044,
+        "posts": 8194
+      },
+      "between_centrality": 0.000203,
       "category": "趣味搞笑"
-    },
-    {
-      "id": "泥泥汝niniru",
-      "name": "泥泥汝niniru",
-      "group": "",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "美妝保養,遊戲電玩"
-    },
-    {
-      "id": "艾爾文",
-      "name": "艾爾文",
-      "group": "",
-      "color": "#58E751",
-      "val": 1.0,
-      "category": "知識教育"
-    },
-    {
-      "id": "DE-JuN",
-      "name": "DE-JuN",
-      "group": "",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "遊戲電玩"
-    },
-    {
-      "id": "小熊-Yuniko",
-      "name": "小熊-Yuniko",
-      "group": "",
-      "color": "#FF6B6B",
-      "val": 1.0,
-      "category": "3C科技,遊戲電玩,旅遊"
-    },
-    {
-      "id": "IFBB-Pro-Lin-Ching-Chieh-林敬傑",
-      "name": "IFBB-Pro-Lin-Ching-Chieh-林敬傑",
-      "group": "",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "運動健身"
     },
     {
       "id": "Bobo-TV",
       "name": "Bobo-TV",
-      "group": "V",
-      "color": "#FFA07A",
-      "val": 1.125,
+      "group": "D",
+      "color": "#58E751",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 168,
+        "Followers": 61964,
+        "posts": 1208
+      },
+      "between_centrality": 0.0,
       "category": "寵物"
     },
     {
       "id": "嘎嫂二伯",
       "name": "嘎嫂二伯",
-      "group": "A",
-      "color": "#45B7D1",
-      "val": 7.125,
+      "group": "I",
+      "color": "#F7A0C0",
+      "val": 24.25,
+      "metrics": {
+        "in_degree": 49,
+        "out_degree": 122,
+        "mutual": 1,
+        "Following": 703,
+        "Followers": 774220,
+        "posts": 4245
+      },
+      "between_centrality": 0.0,
       "category": "旅遊,家庭母嬰"
-    },
-    {
-      "id": "找蔬食-Traveggo",
-      "name": "找蔬食-Traveggo",
-      "group": "",
-      "color": "#78724F",
-      "val": 1.0,
-      "category": "美食料理,趣味搞笑"
     },
     {
       "id": "我是阿樂-林妤臻",
       "name": "我是阿樂-林妤臻",
-      "group": "D",
-      "color": "#58E751",
-      "val": 1.75,
+      "group": "A",
+      "color": "#45B7D1",
+      "val": 13.5,
+      "metrics": {
+        "in_degree": 6,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 1917,
+        "Followers": 722582,
+        "posts": 2397
+      },
+      "between_centrality": 7.6e-05,
       "category": "遊戲電玩,表演藝術"
     },
     {
       "id": "紀卜心-Kimi",
       "name": "紀卜心-Kimi",
-      "group": "f",
-      "color": "#78724F",
-      "val": 1.125,
+      "group": "L",
+      "color": "#D9CB9B",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 5,
+        "mutual": 1,
+        "Following": 869,
+        "Followers": 926658,
+        "posts": 5550
+      },
+      "between_centrality": 2.5e-05,
       "category": "美妝保養,時尚潮流,旅遊"
     },
     {
       "id": "台灣吧",
       "name": "台灣吧",
-      "group": "",
-      "color": "#F7A0C0",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 2,
+        "mutual": 0,
+        "Following": 176,
+        "Followers": 95629,
+        "posts": 656
+      },
+      "between_centrality": 0.0,
       "category": "知識教育,理財創業"
-    },
-    {
-      "id": "Patti-Huang",
-      "name": "Patti-Huang",
-      "group": "",
-      "color": "#B6B5AE",
-      "val": 1.0,
-      "category": "美食料理,寵物,趣味搞笑"
-    },
-    {
-      "id": "強運少女日本日記RU-in-Japan/",
-      "name": "強運少女日本日記RU-in-Japan/",
-      "group": "",
-      "color": "#45B7D1",
-      "val": 1.0,
-      "category": "旅遊,美食料理"
-    },
-    {
-      "id": "邱沁宜",
-      "name": "邱沁宜",
-      "group": "",
-      "color": "#FFA07A",
-      "val": 1.0,
-      "category": "理財創業,高階經理人"
-    },
-    {
-      "id": "阿淇博士-Dr.Achi",
-      "name": "阿淇博士-Dr.Achi",
-      "group": "",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "美食料理,醫療健康,知識教育"
     },
     {
       "id": "J-Bao賤葆",
       "name": "J-Bao賤葆",
-      "group": "Q",
-      "color": "#5968EE",
-      "val": 1.625,
+      "group": "C",
+      "color": "#F7DC6F",
+      "val": 13.25,
+      "metrics": {
+        "in_degree": 5,
+        "out_degree": 4,
+        "mutual": 1,
+        "Following": 759,
+        "Followers": 415031,
+        "posts": 331
+      },
+      "between_centrality": 0.001624,
       "category": "趣味搞笑,旅遊"
     },
     {
       "id": "這群人-董仔",
       "name": "這群人-董仔",
-      "group": "n",
-      "color": "#FF6B6B",
-      "val": 2.25,
+      "group": "H",
+      "color": "#837B4D",
+      "val": 14.5,
+      "metrics": {
+        "in_degree": 10,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 2463,
+        "Followers": 280507,
+        "posts": 4307
+      },
+      "between_centrality": 0.0,
       "category": "表演藝術,趣味搞笑"
-    },
-    {
-      "id": "Ines-Wang",
-      "name": "Ines-Wang",
-      "group": "",
-      "color": "#58E751",
-      "val": 1.0,
-      "category": "美妝保養,時尚潮流,帶貨分潤"
     },
     {
       "id": "元-元",
       "name": "元-元",
-      "group": "n",
-      "color": "#FF6B6B",
-      "val": 1.25,
-      "category": "時尚潮流"
-    },
-    {
-      "id": "史丹利視角的體育世界",
-      "name": "史丹利視角的體育世界",
-      "group": "",
+      "group": "E",
       "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "運動健身"
-    },
-    {
-      "id": "豹子腿方昶詠",
-      "name": "豹子腿方昶詠",
-      "group": " ",
-      "color": "#FF6B6B",
-      "val": 1.0,
-      "category": "運動健身"
-    },
-    {
-      "id": "羅小白",
-      "name": "羅小白",
-      "group": "¡",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "表演藝術"
-    },
-    {
-      "id": "阿慈車庫-Dream-garage",
-      "name": "阿慈車庫-Dream-garage",
-      "group": "¢",
-      "color": "#78724F",
-      "val": 1.0,
-      "category": "汽機車"
-    },
-    {
-      "id": "痘疤醫生---莊盈彥醫師",
-      "name": "痘疤醫生---莊盈彥醫師",
-      "group": "£",
-      "color": "#F7A0C0",
-      "val": 1.0,
-      "category": "知識教育,醫療健康"
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 560,
+        "Followers": 1106945,
+        "posts": 1524
+      },
+      "between_centrality": 0.0,
+      "category": "時尚潮流"
     },
     {
       "id": "Men's-Game-玩物誌",
       "name": "Men's-Game-玩物誌",
-      "group": "r",
-      "color": "#B6B5AE",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 629,
+        "Followers": 34159,
+        "posts": 1407
+      },
+      "between_centrality": 0.0,
       "category": "3C科技"
-    },
-    {
-      "id": "英雄日常Heroisme",
-      "name": "英雄日常Heroisme",
-      "group": "¤",
-      "color": "#B6B5AE",
-      "val": 1.0,
-      "category": "遊戲電玩"
     },
     {
       "id": "飽妮",
       "name": "飽妮",
-      "group": "I",
-      "color": "#F7A0C0",
-      "val": 1.375,
+      "group": "B",
+      "color": "#FFA07A",
+      "val": 12.75,
+      "metrics": {
+        "in_degree": 3,
+        "out_degree": 19,
+        "mutual": 1,
+        "Following": 1114,
+        "Followers": 214978,
+        "posts": 941
+      },
+      "between_centrality": 0.00033,
       "category": "影視評論"
     },
     {
       "id": "咪妃Julia",
       "name": "咪妃Julia",
-      "group": "¥",
-      "color": "#45B7D1",
-      "val": 1.125,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 3,
+        "mutual": 0,
+        "Following": 579,
+        "Followers": 432539,
+        "posts": 1800
+      },
+      "between_centrality": 2.5e-05,
       "category": "遊戲電玩,表演藝術,趣味搞笑"
     },
     {
       "id": "卡特-Kart",
       "name": "卡特-Kart",
-      "group": "N",
-      "color": "#58E751",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 3,
+        "mutual": 0,
+        "Following": 1206,
+        "Followers": 225861,
+        "posts": 1609
+      },
+      "between_centrality": 0.0,
       "category": "美妝保養,時尚潮流"
     },
     {
       "id": "囂搞-Shaogao",
       "name": "囂搞-Shaogao",
-      "group": "¦",
-      "color": "#FFA07A",
-      "val": 1.0,
+      "group": "H",
+      "color": "#837B4D",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 668,
+        "Followers": 322191,
+        "posts": 1705
+      },
+      "between_centrality": 0.0,
       "category": "表演藝術,趣味搞笑"
-    },
-    {
-      "id": "籃靖玟",
-      "name": "籃靖玟",
-      "group": "§",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "旅遊,運動健身"
-    },
-    {
-      "id": "Peter-Su",
-      "name": "Peter-Su",
-      "group": "¨",
-      "color": "#58E751",
-      "val": 1.0,
-      "category": "旅遊,知識教育"
-    },
-    {
-      "id": "SMG-Sirenia海牛",
-      "name": "SMG-Sirenia海牛",
-      "group": "©",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "遊戲電玩"
-    },
-    {
-      "id": "Coffee-Time",
-      "name": "Coffee-Time",
-      "group": "ª",
-      "color": "#FF6B6B",
-      "val": 1.0,
-      "category": "寵物"
-    },
-    {
-      "id": "魯蛋的頻道",
-      "name": "魯蛋的頻道",
-      "group": "«",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "遊戲電玩"
-    },
-    {
-      "id": "含羞草日記",
-      "name": "含羞草日記",
-      "group": "¬",
-      "color": "#78724F",
-      "val": 1.0,
-      "category": "遊戲電玩,趣味搞笑"
-    },
-    {
-      "id": "辣媽Shania",
-      "name": "辣媽Shania",
-      "group": "­",
-      "color": "#F7A0C0",
-      "val": 1.0,
-      "category": "美食料理"
     },
     {
       "id": "三個麻瓜",
       "name": "三個麻瓜",
-      "group": "V",
-      "color": "#FFA07A",
-      "val": 1.0,
-      "category": "影視評論"
-    },
-    {
-      "id": "傲嬌爸的養貓日常",
-      "name": "傲嬌爸的養貓日常",
-      "group": "®",
-      "color": "#B6B5AE",
-      "val": 1.0,
-      "category": "寵物"
-    },
-    {
-      "id": "胡采蘋-Emmy-Hu",
-      "name": "胡采蘋-Emmy-Hu",
-      "group": "¯",
-      "color": "#45B7D1",
-      "val": 1.0,
-      "category": "理財創業"
-    },
-    {
-      "id": "LoganDBeck-小貝",
-      "name": "LoganDBeck-小貝",
-      "group": "°",
-      "color": "#FFA07A",
-      "val": 1.0,
-      "category": "nan"
-    },
-    {
-      "id": "林萱-Shiuan",
-      "name": "林萱-Shiuan",
-      "group": "±",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "美妝保養,時尚潮流"
-    },
-    {
-      "id": "日本藥妝失心瘋",
-      "name": "日本藥妝失心瘋",
-      "group": "²",
+      "group": "D",
       "color": "#58E751",
-      "val": 1.0,
-      "category": "美妝保養,家庭母嬰,帶貨分潤"
-    },
-    {
-      "id": "Campfire營火部落",
-      "name": "Campfire營火部落",
-      "group": "³",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "旅遊"
-    },
-    {
-      "id": "BlaireChen-左撇子",
-      "name": "BlaireChen-左撇子",
-      "group": "´",
-      "color": "#FF6B6B",
-      "val": 1.0,
-      "category": "美妝保養,時尚潮流,旅遊"
-    },
-    {
-      "id": "莊政威-Cliff-Chuang",
-      "name": "莊政威-Cliff-Chuang",
-      "group": "µ",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "汽機車"
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 2,
+        "mutual": 0,
+        "Following": 152,
+        "Followers": 94059,
+        "posts": 1383
+      },
+      "between_centrality": 0.0,
+      "category": "影視評論"
     },
     {
       "id": "Candy-孟潔",
       "name": "Candy-孟潔",
-      "group": "q",
-      "color": "#F7A0C0",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 834,
+        "Followers": 404122,
+        "posts": 1611
+      },
+      "between_centrality": 0.0,
       "category": "時尚潮流"
-    },
-    {
-      "id": "貝莉莓",
-      "name": "貝莉莓",
-      "group": "¶",
-      "color": "#78724F",
-      "val": 1.0,
-      "category": "遊戲電玩,表演藝術"
     },
     {
       "id": "蕭志瑋",
       "name": "蕭志瑋",
-      "group": "·",
-      "color": "#F7A0C0",
-      "val": 1.0,
+      "group": "H",
+      "color": "#837B4D",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 991,
+        "Followers": 225341,
+        "posts": 1947
+      },
+      "between_centrality": 0.0,
       "category": "表演藝術,趣味搞笑"
-    },
-    {
-      "id": "周小葳",
-      "name": "周小葳",
-      "group": "¸",
-      "color": "#B6B5AE",
-      "val": 1.0,
-      "category": "時尚潮流,高階經理人"
     },
     {
       "id": "胡子Huz",
       "name": "胡子Huz",
-      "group": "]",
-      "color": "#F7A0C0",
-      "val": 1.0,
+      "group": "G",
+      "color": "#5968EE",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 371,
+        "Followers": 117022,
+        "posts": 185
+      },
+      "between_centrality": 0.0,
       "category": "趣味搞笑"
-    },
-    {
-      "id": "柴犬Nana和阿楞的一天",
-      "name": "柴犬Nana和阿楞的一天",
-      "group": "¹",
-      "color": "#45B7D1",
-      "val": 1.0,
-      "category": "寵物"
     },
     {
       "id": "那那大師",
       "name": "那那大師",
-      "group": "q",
-      "color": "#F7A0C0",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 5177,
+        "Followers": 74477,
+        "posts": 1273
+      },
+      "between_centrality": 0.0,
       "category": "趣味搞笑"
-    },
-    {
-      "id": "維思維",
-      "name": "維思維",
-      "group": "º",
-      "color": "#FFA07A",
-      "val": 1.0,
-      "category": "知識教育"
-    },
-    {
-      "id": "肉肉Neneko",
-      "name": "肉肉Neneko",
-      "group": "»",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "表演藝術"
     },
     {
       "id": "上發條俱樂部",
       "name": "上發條俱樂部",
-      "group": "i",
-      "color": "#45B7D1",
-      "val": 4.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 18.0,
+      "metrics": {
+        "in_degree": 24,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 2540,
+        "Followers": 164251,
+        "posts": 5234
+      },
+      "between_centrality": 0.0,
       "category": "家庭母嬰,寵物,帶貨分潤"
-    },
-    {
-      "id": "牛排",
-      "name": "牛排",
-      "group": "¼",
-      "color": "#58E751",
-      "val": 1.0,
-      "category": "趣味搞笑"
-    },
-    {
-      "id": "希露弟弟啃雞腿",
-      "name": "希露弟弟啃雞腿",
-      "group": "½",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "寵物"
-    },
-    {
-      "id": "黃山料",
-      "name": "黃山料",
-      "group": "¾",
-      "color": "#FF6B6B",
-      "val": 1.0,
-      "category": "時事討論"
     },
     {
       "id": "羚小鹿",
       "name": "羚小鹿",
-      "group": "X",
-      "color": "#58E751",
-      "val": 1.625,
+      "group": "K",
+      "color": "#8984CF",
+      "val": 13.25,
+      "metrics": {
+        "in_degree": 5,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 627,
+        "Followers": 353699,
+        "posts": 914
+      },
+      "between_centrality": 0.0,
       "category": "美妝保養,旅遊,表演藝術"
-    },
-    {
-      "id": "Natalie吳斐莉",
-      "name": "Natalie吳斐莉",
-      "group": "¿",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "美妝保養,時尚潮流,旅遊"
-    },
-    {
-      "id": "黃帝筱清Virus",
-      "name": "黃帝筱清Virus",
-      "group": "À",
-      "color": "#78724F",
-      "val": 1.0,
-      "category": "遊戲電玩"
-    },
-    {
-      "id": "村子裡的凱莉哥",
-      "name": "村子裡的凱莉哥",
-      "group": "Á",
-      "color": "#F7A0C0",
-      "val": 1.0,
-      "category": "旅遊,家庭母嬰,帶貨分潤"
-    },
-    {
-      "id": "老王-oldwang",
-      "name": "老王-oldwang",
-      "group": "Â",
-      "color": "#B6B5AE",
-      "val": 1.0,
-      "category": "趣味搞笑,時事討論"
-    },
-    {
-      "id": "處女座媽媽的瑣碎日常",
-      "name": "處女座媽媽的瑣碎日常",
-      "group": "Ã",
-      "color": "#45B7D1",
-      "val": 1.0,
-      "category": "綜合其他"
-    },
-    {
-      "id": "虎麗笑嗨嗨",
-      "name": "虎麗笑嗨嗨",
-      "group": "Ä",
-      "color": "#FFA07A",
-      "val": 1.0,
-      "category": "美食料理"
-    },
-    {
-      "id": "老王愛說笑",
-      "name": "老王愛說笑",
-      "group": "Å",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "理財創業"
     },
     {
       "id": "喪屍老爸",
       "name": "喪屍老爸",
-      "group": "¥",
-      "color": "#45B7D1",
-      "val": 1.0,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 380,
+        "Followers": 116757,
+        "posts": 1301
+      },
+      "between_centrality": 0.0,
       "category": "家庭母嬰,趣味搞笑"
     },
     {
       "id": "尤汐伯夷",
       "name": "尤汐伯夷",
-      "group": "G",
-      "color": "#5968EE",
-      "val": 1.25,
-      "category": "遊戲電玩"
-    },
-    {
-      "id": "崔咪Tramy",
-      "name": "崔咪Tramy",
-      "group": "Æ",
-      "color": "#58E751",
-      "val": 1.0,
-      "category": "時尚潮流"
-    },
-    {
-      "id": "Cindy-H",
-      "name": "Cindy-H",
-      "group": "Ç",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "美妝保養,時尚潮流"
-    },
-    {
-      "id": "MR.JOE-HOBBY.tv",
-      "name": "MR.JOE-HOBBY.tv",
-      "group": "È",
-      "color": "#FF6B6B",
-      "val": 1.0,
+      "group": "J",
+      "color": "#B5BCB2",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 594,
+        "Followers": 70600,
+        "posts": 1730
+      },
+      "between_centrality": 0.0,
       "category": "遊戲電玩"
     },
     {
       "id": "Sunnie-陸筱晴",
       "name": "Sunnie-陸筱晴",
-      "group": "X",
-      "color": "#58E751",
-      "val": 1.125,
+      "group": "K",
+      "color": "#8984CF",
+      "val": 12.25,
+      "metrics": {
+        "in_degree": 1,
+        "out_degree": 2,
+        "mutual": 0,
+        "Following": 1105,
+        "Followers": 226451,
+        "posts": 3293
+      },
+      "between_centrality": 0.0,
       "category": "美妝保養,時尚潮流,旅遊,美食料理"
-    },
-    {
-      "id": "Goris-Sky",
-      "name": "Goris-Sky",
-      "group": "É",
-      "color": "#5968EE",
-      "val": 1.0,
-      "category": "時尚潮流,美妝保養"
-    },
-    {
-      "id": "依梨",
-      "name": "依梨",
-      "group": "Ê",
-      "color": "#78724F",
-      "val": 1.0,
-      "category": "時尚潮流,遊戲電玩"
-    },
-    {
-      "id": "許允樂的老兵魂",
-      "name": "許允樂的老兵魂",
-      "group": "Ë",
-      "color": "#F7A0C0",
-      "val": 1.0,
-      "category": "美妝保養,時尚潮流"
-    },
-    {
-      "id": "鬧著玩娛樂",
-      "name": "鬧著玩娛樂",
-      "group": "Ì",
-      "color": "#B6B5AE",
-      "val": 1.0,
-      "category": "旅遊,美食料理"
-    },
-    {
-      "id": "林淑芬2.0",
-      "name": "林淑芬2.0",
-      "group": "Í",
-      "color": "#45B7D1",
-      "val": 1.0,
-      "category": "綜合其他"
     },
     {
       "id": "Mom-&-Dad",
       "name": "Mom-&-Dad",
-      "group": "",
-      "color": "#F7A0C0",
-      "val": 1.25,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.5,
+      "metrics": {
+        "in_degree": 2,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 483,
+        "Followers": 74943,
+        "posts": 906
+      },
+      "between_centrality": 0.0,
       "category": "家庭母嬰"
-    },
-    {
-      "id": "Meg-今天穿什麼",
-      "name": "Meg-今天穿什麼",
-      "group": "Î",
-      "color": "#FFA07A",
-      "val": 1.0,
-      "category": "美妝保養,時尚潮流"
-    },
-    {
-      "id": "小凱老師",
-      "name": "小凱老師",
-      "group": "Ï",
-      "color": "#F7DC6F",
-      "val": 1.0,
-      "category": "美妝保養"
-    },
-    {
-      "id": "紫玥桃",
-      "name": "紫玥桃",
-      "group": "Ð",
-      "color": "#58E751",
-      "val": 1.0,
-      "category": "時尚潮流,表演藝術"
     },
     {
       "id": "鵝鵝就是鵝鵝",
       "name": "鵝鵝就是鵝鵝",
-      "group": "¥",
-      "color": "#45B7D1",
-      "val": 1.375,
+      "group": "M",
+      "color": "#5F5F5F",
+      "val": 12.75,
+      "metrics": {
+        "in_degree": 3,
+        "out_degree": 0,
+        "mutual": 0,
+        "Following": 1001,
+        "Followers": 107527,
+        "posts": 1203
+      },
+      "between_centrality": 0.0,
       "category": "汽機車"
     },
     {
       "id": "安啾咪",
       "name": "安啾咪",
-      "group": "]",
-      "color": "#F7A0C0",
-      "val": 1.0,
+      "group": "G",
+      "color": "#5968EE",
+      "val": 12.0,
+      "metrics": {
+        "in_degree": 0,
+        "out_degree": 1,
+        "mutual": 0,
+        "Following": 215,
+        "Followers": 385142,
+        "posts": 497
+      },
+      "between_centrality": 0.0,
       "category": "美食料理,表演藝術"
-    },
-    {
-      "id": "Linzin-阿哲",
-      "name": "Linzin-阿哲",
-      "group": "Ñ",
-      "color": "#BB8FCE",
-      "val": 1.0,
-      "category": "3C科技"
     },
     {
       "id": "廚佛瑞德Fred",
       "name": "廚佛瑞德Fred",
-      "group": "Q",
-      "color": "#5968EE",
-      "val": 1.625,
+      "group": "C",
+      "color": "#F7DC6F",
+      "val": 13.25,
+      "metrics": {
+        "in_degree": 5,
+        "out_degree": 5,
+        "mutual": 2,
+        "Following": 1037,
+        "Followers": 183927,
+        "posts": 930
+      },
+      "between_centrality": 0.002386,
       "category": "美食料理,帶貨分潤"
-    },
-    {
-      "id": "大H-陳建昕",
-      "name": "大H-陳建昕",
-      "group": "Ò",
-      "color": "#FF6B6B",
-      "val": 1.0,
-      "category": "運動健身"
     }
   ],
   "links": [
     {
       "source": "蔡阿嘎",
       "target": "千千進食中",
-      "value": 0.6666666666666666
+      "value": 2.0
     },
     {
       "source": "蔡阿嘎",
       "target": "Ian&Eric",
-      "value": 0.5
-    },
-    {
-      "source": "蔡阿嘎",
-      "target": "阿翰po影片",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "蔡阿嘎",
       "target": "蔡桃貴",
-      "value": 2.0
+      "value": 1.0
     },
     {
       "source": "蔡阿嘎",
@@ -1630,567 +1538,667 @@
     {
       "source": "蔡阿嘎",
       "target": "嘎嫂二伯",
-      "value": 61.39830508474576
+      "value": 44.0
     },
     {
       "source": "Joeman",
       "target": "阿滴英文",
-      "value": 0.6666666666666666
+      "value": 2.0
     },
     {
       "source": "Joeman",
       "target": "Onion-man-洋蔥先生與阿文",
-      "value": 0.5
-    },
-    {
-      "source": "Joeman",
-      "target": "大蛇丸",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "Joeman",
       "target": "Ian&Eric",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "Joeman",
       "target": "黃氏兄弟",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "Joeman",
       "target": "3cTim哥生活的日常",
-      "value": 2.0
-    },
-    {
-      "source": "Joeman",
-      "target": "小尾巴",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "Joeman",
       "target": "元-元",
-      "value": 0.6666666666666666
-    },
-    {
-      "source": "千千進食中",
-      "target": "木曜4超玩",
-      "value": 0.5
-    },
-    {
-      "source": "千千進食中",
-      "target": "阿翰po影片",
-      "value": 0.5
+      "value": 2.0
     },
     {
       "source": "千千進食中",
       "target": "蔡哥",
-      "value": 2.0
-    },
-    {
-      "source": "千千進食中",
-      "target": "嘎嫂二伯",
-      "value": 0.6666666666666666
+      "value": 1.0
     },
     {
       "source": "千千進食中",
       "target": "飽妮",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "千千進食中",
       "target": "廚佛瑞德Fred",
-      "value": 2.0
+      "value": 1.0
     },
     {
       "source": "How-Fun-如何爽",
       "target": "廉傑克曼",
-      "value": 2.0
+      "value": 1.0
     },
     {
       "source": "How-Fun-如何爽",
       "target": "蔡哥",
-      "value": 2.0
-    },
-    {
-      "source": "一隻阿圓",
-      "target": "那個女生-Kiki",
-      "value": 0.6666666666666666
-    },
-    {
-      "source": "一隻阿圓",
-      "target": "白癡公主",
-      "value": 0.5
-    },
-    {
-      "source": "一隻阿圓",
-      "target": "這群人-尼克",
-      "value": 0.8
-    },
-    {
-      "source": "一隻阿圓",
-      "target": "見習網美小吳",
-      "value": 0.75
-    },
-    {
-      "source": "一隻阿圓",
-      "target": "PEETA葛格",
-      "value": 0.6666666666666666
+      "value": 1.0
     },
     {
       "source": "一隻阿圓",
       "target": "蔡哥",
-      "value": 0.5
-    },
-    {
-      "source": "一隻阿圓",
-      "target": "Sandy-&-Mandy",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "一隻阿圓",
       "target": "飽妮",
-      "value": 2.0
+      "value": 1.0
     },
     {
       "source": "77老大",
       "target": "黃小米-Mii",
-      "value": 0.5
+      "value": 1.0
+    },
+    {
+      "source": "那個女生-Kiki",
+      "target": "一隻阿圓",
+      "value": 2.0
     },
     {
       "source": "那個女生-Kiki",
       "target": "我是阿樂-林妤臻",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "阿滴英文",
       "target": "Onion-man-洋蔥先生與阿文",
-      "value": 0.6666666666666666
-    },
-    {
-      "source": "阿滴英文",
-      "target": "大蛇丸",
-      "value": 0.5
-    },
-    {
-      "source": "阿滴英文",
-      "target": "貓貓蟲-咖波",
-      "value": 0.5
+      "value": 2.0
     },
     {
       "source": "阿滴英文",
       "target": "黃氏兄弟",
-      "value": 0.5
-    },
-    {
-      "source": "阿滴英文",
-      "target": "志祺七七",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "阿滴英文",
       "target": "HOOK",
-      "value": 0.5
-    },
-    {
-      "source": "阿滴英文",
-      "target": "黃大謙",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "阿滴英文",
       "target": "PEETA葛格",
-      "value": 2.0
+      "value": 1.0
     },
     {
       "source": "阿滴英文",
       "target": "滴妹",
-      "value": 8.129032258064516
+      "value": 30.0
     },
     {
       "source": "阿滴英文",
       "target": "J-Bao賤葆",
-      "value": 0.6666666666666666
+      "value": 2.0
     },
     {
       "source": "阿滴英文",
       "target": "這群人-董仔",
-      "value": 0.5
+      "value": 1.0
+    },
+    {
+      "source": "廉傑克曼",
+      "target": "How-Fun-如何爽",
+      "value": 1.0
     },
     {
       "source": "廉傑克曼",
       "target": "鐵牛-Ironbull",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "廉傑克曼",
       "target": "蔡哥",
-      "value": 2.0
+      "value": 1.0
     },
     {
       "source": "廉傑克曼",
       "target": "尤汐伯夷",
-      "value": 0.6666666666666666
+      "value": 2.0
     },
     {
       "source": "江老師",
       "target": "HahaTai-哈哈台",
-      "value": 0.5
-    },
-    {
-      "source": "江老師",
-      "target": "卡特-Kart",
-      "value": 0.75
-    },
-    {
-      "source": "Onion-man-洋蔥先生與阿文",
-      "target": "大蛇丸",
-      "value": 0.9166666666666666
+      "value": 1.0
     },
     {
       "source": "Onion-man-洋蔥先生與阿文",
       "target": "志祺七七",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "Onion-man-洋蔥先生與阿文",
       "target": "J-Bao賤葆",
-      "value": 4.0
+      "value": 2.0
     },
     {
       "source": "Onion-man-洋蔥先生與阿文",
       "target": "廚佛瑞德Fred",
-      "value": 2.0
+      "value": 1.0
     },
     {
       "source": "人類超有病-Baxuan",
       "target": "健人蓋伊",
-      "value": 0.5
+      "value": 1.0
+    },
+    {
+      "source": "大蛇丸",
+      "target": "Joeman",
+      "value": 1.0
+    },
+    {
+      "source": "大蛇丸",
+      "target": "阿滴英文",
+      "value": 1.0
+    },
+    {
+      "source": "大蛇丸",
+      "target": "Onion-man-洋蔥先生與阿文",
+      "value": 11.0
     },
     {
       "source": "大蛇丸",
       "target": "木曜4超玩",
-      "value": 0.6666666666666666
+      "value": 2.0
     },
     {
       "source": "大蛇丸",
       "target": "這群人-尼克",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "大蛇丸",
       "target": "廚佛瑞德Fred",
-      "value": 0.75
+      "value": 3.0
     },
     {
-      "source": "Ian&Eric",
-      "target": "阿翰po影片",
-      "value": 0.6666666666666666
+      "source": "貓貓蟲-咖波",
+      "target": "阿滴英文",
+      "value": 1.0
     },
     {
       "source": "Ian&Eric",
       "target": "PEETA葛格",
-      "value": 0.5
-    },
-    {
-      "source": "Ian&Eric",
-      "target": "嘎嫂二伯",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "Ian&Eric",
       "target": "我是阿樂-林妤臻",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "黃氏兄弟",
       "target": "魚乾",
-      "value": 2.0
+      "value": 1.0
     },
     {
       "source": "黃氏兄弟",
       "target": "彼得爸與蘇珊媽",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "黃氏兄弟",
       "target": "Aries艾瑞絲",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "黃氏兄弟",
       "target": "關韶文",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "黃氏兄弟",
       "target": "有璟妍精요찡옌찡",
-      "value": 0.5
-    },
-    {
-      "source": "黃氏兄弟",
-      "target": "滴妹",
-      "value": 0.5
-    },
-    {
-      "source": "黃氏兄弟",
-      "target": "蔡哥",
-      "value": 0.6666666666666666
+      "value": 1.0
     },
     {
       "source": "黃氏兄弟",
       "target": "Bobo-TV",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "黃氏兄弟",
       "target": "我是阿樂-林妤臻",
-      "value": 0.5
-    },
-    {
-      "source": "黃氏兄弟",
-      "target": "J-Bao賤葆",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "黃氏兄弟",
       "target": "這群人-董仔",
-      "value": 0.75
-    },
-    {
-      "source": "黃氏兄弟",
-      "target": "三個麻瓜",
-      "value": 0.6666666666666666
+      "value": 3.0
     },
     {
       "source": "我得了一種吃菜就會死的病-微疼",
       "target": "鐵牛-Ironbull",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "琳妲-林羿禎",
       "target": "林進-飛醺卑鄙-fashion-baby",
-      "value": 2.0
+      "value": 1.0
     },
     {
       "source": "琳妲-林羿禎",
       "target": "羚小鹿",
-      "value": 0.75
+      "value": 3.0
     },
     {
       "source": "琳妲-林羿禎",
       "target": "Sunnie-陸筱晴",
-      "value": 0.5
+      "value": 1.0
+    },
+    {
+      "source": "白癡公主",
+      "target": "一隻阿圓",
+      "value": 1.0
     },
     {
       "source": "白癡公主",
       "target": "黃大謙",
-      "value": 0.5
-    },
-    {
-      "source": "白癡公主",
-      "target": "PEETA葛格",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "白癡公主",
       "target": "Evelyn-Chen-理科太太",
-      "value": 2.0
+      "value": 1.0
     },
     {
       "source": "陳彥婷",
       "target": "瑀熙-Yuci",
-      "value": 0.5
-    },
-    {
-      "source": "陳彥婷",
-      "target": "Yun-Chou",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "魚乾",
-      "target": "GINA-HELLO!",
-      "value": 0.5
+      "target": "黃氏兄弟",
+      "value": 3.0
     },
     {
-      "source": "魚乾",
-      "target": "胡子Huz",
-      "value": 0.5
+      "source": "志祺七七",
+      "target": "阿滴英文",
+      "value": 1.0
     },
     {
-      "source": "魚乾",
-      "target": "安啾咪",
-      "value": 0.5
-    },
-    {
-      "source": "HOOK",
-      "target": "黃大謙",
-      "value": 0.5
+      "source": "木曜4超玩",
+      "target": "千千進食中",
+      "value": 1.0
     },
     {
       "source": "HahaTai-哈哈台",
       "target": "崔&雪莉&Jon",
-      "value": 0.5
+      "value": 1.0
+    },
+    {
+      "source": "阿翰po影片",
+      "target": "蔡阿嘎",
+      "value": 1.0
+    },
+    {
+      "source": "阿翰po影片",
+      "target": "千千進食中",
+      "value": 1.0
+    },
+    {
+      "source": "阿翰po影片",
+      "target": "Ian&Eric",
+      "value": 2.0
     },
     {
       "source": "阿翰po影片",
       "target": "飽妮",
-      "value": 0.5
+      "value": 1.0
+    },
+    {
+      "source": "這群人-尼克",
+      "target": "一隻阿圓",
+      "value": 4.0
     },
     {
       "source": "這群人-尼克",
       "target": "PEETA葛格",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "這群人-尼克",
       "target": "這群人TGOP",
-      "value": 0.5
+      "value": 1.0
+    },
+    {
+      "source": "蔡桃貴",
+      "target": "蔡阿嘎",
+      "value": 27.0
     },
     {
       "source": "蔡桃貴",
       "target": "蔡哥",
-      "value": 0.5
+      "value": 1.0
     },
     {
       "source": "蔡桃貴",
       "target": "嘎嫂二伯",
-      "value": 0.8333333333333333
+      "value": 5.0
     },
     {
-      "source": "阿啾繪圖同萌",
-      "target": "啾啾妹-by-LIIN",
-      "value": 0.5
+      "source": "黃大謙",
+      "target": "阿滴英文",
+      "value": 1.0
+    },
+    {
+      "source": "黃大謙",
+      "target": "HOOK",
+      "value": 1.0
     },
     {
       "source": "黃大謙",
       "target": "蔡哥",
-      "value": 0.5
+      "value": 1.0
+    },
+    {
+      "source": "見習網美小吳",
+      "target": "一隻阿圓",
+      "value": 3.0
     },
     {
       "source": "見習網美小吳",
       "target": "紀卜心-Kimi",
+      "value": 1.0
+    },
+    {
+      "source": "PEETA葛格",
+      "target": "一隻阿圓",
       "value": 2.0
+    },
+    {
+      "source": "PEETA葛格",
+      "target": "阿滴英文",
+      "value": 2.0
+    },
+    {
+      "source": "PEETA葛格",
+      "target": "白癡公主",
+      "value": 1.0
     },
     {
       "source": "連環泡有芒果",
       "target": "上發條俱樂部",
-      "value": 0.96
+      "value": 24.0
     },
     {
-      "source": "Aries艾瑞絲",
-      "target": "瑀熙-Yuci",
-      "value": 0.5
-    },
-    {
-      "source": "這群人TGOP",
-      "target": "林進-飛醺卑鄙-fashion-baby",
-      "value": 0.5
+      "source": "瑀熙-Yuci",
+      "target": "Aries艾瑞絲",
+      "value": 1.0
     },
     {
       "source": "這群人TGOP",
       "target": "這群人-董仔",
-      "value": 0.6666666666666666
+      "value": 2.0
+    },
+    {
+      "source": "3cTim哥生活的日常",
+      "target": "Joeman",
+      "value": 1.0
     },
     {
       "source": "鹿人",
       "target": "J-Bao賤葆",
-      "value": 0.5
+      "value": 1.0
     },
     {
-      "source": "關韶文",
-      "target": "Candy-孟潔",
-      "value": 0.5
-    },
-    {
-      "source": "關韶文",
-      "target": "那那大師",
-      "value": 0.5
+      "source": "GINA-HELLO!",
+      "target": "魚乾",
+      "value": 1.0
     },
     {
       "source": "我是老爸-我不要當爸!",
       "target": "Men's-Game-玩物誌",
-      "value": 0.5
+      "value": 1.0
     },
     {
-      "source": "現在宅知道",
-      "target": "Six-Wang",
-      "value": 0.5
+      "source": "啾啾妹-by-LIIN",
+      "target": "阿啾繪圖同萌",
+      "value": 1.0
     },
     {
       "source": "閃電狼Flash-Wolves",
       "target": "小葵-XiaoKui",
-      "value": 0.75
+      "value": 3.0
+    },
+    {
+      "source": "Yun-Chou",
+      "target": "陳彥婷",
+      "value": 1.0
+    },
+    {
+      "source": "Evelyn-Chen-理科太太",
+      "target": "白癡公主",
+      "value": 1.0
     },
     {
       "source": "小A辣",
       "target": "林進-飛醺卑鄙-fashion-baby",
-      "value": 2.0
+      "value": 1.0
     },
     {
-      "source": "魔術Channel---Davio",
-      "target": "紀卜心-Kimi",
-      "value": 0.5
+      "source": "滴妹",
+      "target": "阿滴英文",
+      "value": 6.0
+    },
+    {
+      "source": "滴妹",
+      "target": "黃氏兄弟",
+      "value": 1.0
     },
     {
       "source": "恩熙俊-aka-MC-Jeng",
       "target": "我是阿樂-林妤臻",
-      "value": 0.5
+      "value": 1.0
+    },
+    {
+      "source": "小尾巴",
+      "target": "Joeman",
+      "value": 1.0
     },
     {
       "source": "蔡哥",
-      "target": "嘎嫂二伯",
-      "value": 0.6666666666666666
+      "target": "蔡阿嘎",
+      "value": 1.0
+    },
+    {
+      "source": "蔡哥",
+      "target": "千千進食中",
+      "value": 2.0
+    },
+    {
+      "source": "蔡哥",
+      "target": "How-Fun-如何爽",
+      "value": 1.0
+    },
+    {
+      "source": "蔡哥",
+      "target": "廉傑克曼",
+      "value": 1.0
+    },
+    {
+      "source": "蔡哥",
+      "target": "黃氏兄弟",
+      "value": 2.0
     },
     {
       "source": "蔡哥",
       "target": "我是阿樂-林妤臻",
-      "value": 0.5
+      "value": 1.0
     },
     {
-      "source": "我是阿樂-林妤臻",
-      "target": "J-Bao賤葆",
-      "value": 0.5
+      "source": "Sandy-&-Mandy",
+      "target": "一隻阿圓",
+      "value": 1.0
+    },
+    {
+      "source": "Six-Wang",
+      "target": "現在宅知道",
+      "value": 1.0
+    },
+    {
+      "source": "林進-飛醺卑鄙-fashion-baby",
+      "target": "琳妲-林羿禎",
+      "value": 1.0
+    },
+    {
+      "source": "林進-飛醺卑鄙-fashion-baby",
+      "target": "這群人TGOP",
+      "value": 1.0
+    },
+    {
+      "source": "林進-飛醺卑鄙-fashion-baby",
+      "target": "小A辣",
+      "value": 2.0
+    },
+    {
+      "source": "嘎嫂二伯",
+      "target": "蔡阿嘎",
+      "value": 117.0
+    },
+    {
+      "source": "嘎嫂二伯",
+      "target": "千千進食中",
+      "value": 2.0
+    },
+    {
+      "source": "嘎嫂二伯",
+      "target": "Ian&Eric",
+      "value": 1.0
+    },
+    {
+      "source": "嘎嫂二伯",
+      "target": "蔡哥",
+      "value": 2.0
     },
     {
       "source": "我是阿樂-林妤臻",
       "target": "這群人-董仔",
-      "value": 0.5
+      "value": 1.0
+    },
+    {
+      "source": "紀卜心-Kimi",
+      "target": "見習網美小吳",
+      "value": 4.0
+    },
+    {
+      "source": "紀卜心-Kimi",
+      "target": "魔術Channel---Davio",
+      "value": 1.0
     },
     {
       "source": "台灣吧",
       "target": "Mom-&-Dad",
-      "value": 0.6666666666666666
+      "value": 2.0
     },
     {
-      "source": "這群人-董仔",
-      "target": "元-元",
-      "value": 0.5
+      "source": "J-Bao賤葆",
+      "target": "Onion-man-洋蔥先生與阿文",
+      "value": 2.0
     },
     {
-      "source": "這群人-董仔",
-      "target": "囂搞-Shaogao",
-      "value": 0.5
+      "source": "J-Bao賤葆",
+      "target": "黃氏兄弟",
+      "value": 1.0
     },
     {
-      "source": "這群人-董仔",
-      "target": "蕭志瑋",
-      "value": 0.5
+      "source": "J-Bao賤葆",
+      "target": "我是阿樂-林妤臻",
+      "value": 1.0
     },
     {
-      "source": "咪妃Julia",
-      "target": "喪屍老爸",
-      "value": 0.5
+      "source": "元-元",
+      "target": "這群人-董仔",
+      "value": 1.0
+    },
+    {
+      "source": "飽妮",
+      "target": "一隻阿圓",
+      "value": 19.0
     },
     {
       "source": "咪妃Julia",
       "target": "鵝鵝就是鵝鵝",
-      "value": 0.75
+      "value": 3.0
     },
     {
-      "source": "羚小鹿",
-      "target": "Sunnie-陸筱晴",
-      "value": 0.6666666666666666
+      "source": "卡特-Kart",
+      "target": "江老師",
+      "value": 3.0
+    },
+    {
+      "source": "囂搞-Shaogao",
+      "target": "這群人-董仔",
+      "value": 1.0
+    },
+    {
+      "source": "三個麻瓜",
+      "target": "黃氏兄弟",
+      "value": 2.0
+    },
+    {
+      "source": "Candy-孟潔",
+      "target": "關韶文",
+      "value": 1.0
+    },
+    {
+      "source": "蕭志瑋",
+      "target": "這群人-董仔",
+      "value": 1.0
+    },
+    {
+      "source": "胡子Huz",
+      "target": "魚乾",
+      "value": 1.0
+    },
+    {
+      "source": "那那大師",
+      "target": "關韶文",
+      "value": 1.0
+    },
+    {
+      "source": "喪屍老爸",
+      "target": "咪妃Julia",
+      "value": 1.0
+    },
+    {
+      "source": "Sunnie-陸筱晴",
+      "target": "羚小鹿",
+      "value": 2.0
+    },
+    {
+      "source": "安啾咪",
+      "target": "魚乾",
+      "value": 1.0
+    },
+    {
+      "source": "廚佛瑞德Fred",
+      "target": "千千進食中",
+      "value": 1.0
+    },
+    {
+      "source": "廚佛瑞德Fred",
+      "target": "Onion-man-洋蔥先生與阿文",
+      "value": 4.0
     }
   ]
 }

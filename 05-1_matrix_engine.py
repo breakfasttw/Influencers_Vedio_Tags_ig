@@ -38,7 +38,9 @@ def run_matrix_engine():
     # Aisa_Order -> Original_Rank
     rank_map = dict(zip(master_df['person_name'], master_df['Aisa_Order']))
     url_map = dict(zip(master_df['person_name'], master_df.get('ig_url', '')))
-    followers_map = dict(zip(master_df['person_name'], master_df.get('followers', '')))
+    followers_map = dict(zip(master_df['person_name'], master_df.get('Followers', '')))
+    following_map = dict(zip(master_df['person_name'], master_df.get('Following', '')))
+    posts_map = dict(zip(master_df['person_name'], master_df.get('posts', ''))) 
     category_map = dict(zip(master_df['person_name'], master_df.get('category', '')))
 
     # ==========================================
@@ -102,17 +104,19 @@ def run_matrix_engine():
         'Network_Influence_Score': [(in_strength.get(n, 0) / (node_count - 1) * 100) for n in ordered_influencers],
         'Betweenness_Centrality': [round(betweenness.get(n, 0), 6) for n in ordered_influencers],
         'ig_url': [url_map.get(n, '') for n in ordered_influencers],
-        'followers': [followers_map.get(n, '') for n in ordered_influencers],
+        'posts': [posts_map.get(n, '') for n in ordered_influencers],
+        'Followers': [followers_map.get(n, '') for n in ordered_influencers],
+        'Following': [following_map.get(n, '') for n in ordered_influencers],
         'category': [category_map.get(n, '') for n in ordered_influencers]
     })
 
-    # 處理外部追蹤資料 (若檔案存在則 mapping，否則填 0)
-    if os.path.exists(TOTAL_FOLLOWING_PATH):
-        total_df = pd.read_csv(TOTAL_FOLLOWING_PATH)
-        follow_map = dict(zip(total_df['source'].str.strip(), total_df['distinct_following']))
-        metrics_report['distinct_following'] = metrics_report['Person_Name'].map(follow_map).fillna(0).astype(int)
-    else:
-        metrics_report['distinct_following'] = 0
+    # # 處理外部追蹤資料 (若檔案存在則 mapping，否則填 0)
+    # if os.path.exists(TOTAL_FOLLOWING_PATH):
+    #     total_df = pd.read_csv(TOTAL_FOLLOWING_PATH)
+    #     follow_map = dict(zip(total_df['source'].str.strip(), total_df['distinct_following']))
+    #     metrics_report['distinct_following'] = metrics_report['Person_Name'].map(follow_map).fillna(0).astype(int)
+    # else:
+    #     metrics_report['distinct_following'] = 0
 
     # ==========================================
     # 5. 儲存結果

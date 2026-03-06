@@ -1,0 +1,314 @@
+{
+  "project_metadata": {
+    "total_influencers": 200,
+    "analysis_date": "2026-03",
+    "reciprocity_mode": false
+  },
+  "network_overview": {
+    "total_interactions": 459,
+    "active_social_links": 118,
+    "isolated_influencers": 111,
+    "isolation_rate": "55.5%",
+    "density": 0.00593
+  },
+  "top_performers": {
+    "most_tagged (被動核心)": [
+      {
+        "Person_Name": "蔡阿嘎",
+        "In_Degree (被標記數)": 146
+      },
+      {
+        "Person_Name": "嘎嫂二伯",
+        "In_Degree (被標記數)": 49
+      },
+      {
+        "Person_Name": "一隻阿圓",
+        "In_Degree (被標記數)": 32
+      },
+      {
+        "Person_Name": "滴妹",
+        "In_Degree (被標記數)": 30
+      },
+      {
+        "Person_Name": "上發條俱樂部",
+        "In_Degree (被標記數)": 24
+      }
+    ],
+    "most_active (主動串聯)": [
+      {
+        "Person_Name": "嘎嫂二伯",
+        "Out_Degree (主動標記數)": 122
+      },
+      {
+        "Person_Name": "蔡阿嘎",
+        "Out_Degree (主動標記數)": 50
+      },
+      {
+        "Person_Name": "阿滴英文",
+        "Out_Degree (主動標記數)": 38
+      },
+      {
+        "Person_Name": "蔡桃貴",
+        "Out_Degree (主動標記數)": 33
+      },
+      {
+        "Person_Name": "連環泡有芒果",
+        "Out_Degree (主動標記數)": 24
+      }
+    ]
+  },
+  "algorithm_comparison": {
+    "Walktrap": {
+      "modularity": 0.603,
+      "group_count": 13,
+      "top_groups": [
+        {
+          "group": "A",
+          "leader": "蔡哥",
+          "size": 6,
+          "is_mixed_group": false
+        },
+        {
+          "group": "B",
+          "leader": "一隻阿圓",
+          "size": 5,
+          "is_mixed_group": false
+        },
+        {
+          "group": "C",
+          "leader": "Onion-man-洋蔥先生與阿文",
+          "size": 5,
+          "is_mixed_group": false
+        },
+        {
+          "group": "D",
+          "leader": "黃氏兄弟",
+          "size": 5,
+          "is_mixed_group": false
+        },
+        {
+          "group": "E",
+          "leader": "Joeman",
+          "size": 4,
+          "is_mixed_group": false
+        },
+        {
+          "group": "F",
+          "leader": "滴妹",
+          "size": 4,
+          "is_mixed_group": false
+        },
+        {
+          "group": "G",
+          "leader": "魚乾",
+          "size": 4,
+          "is_mixed_group": false
+        },
+        {
+          "group": "H",
+          "leader": "這群人-董仔",
+          "size": 4,
+          "is_mixed_group": false
+        },
+        {
+          "group": "I",
+          "leader": "蔡阿嘎",
+          "size": 3,
+          "is_mixed_group": false
+        },
+        {
+          "group": "J",
+          "leader": "How-Fun-如何爽",
+          "size": 3,
+          "is_mixed_group": false
+        },
+        {
+          "group": "K",
+          "leader": "羚小鹿",
+          "size": 3,
+          "is_mixed_group": false
+        },
+        {
+          "group": "L",
+          "leader": "見習網美小吳",
+          "size": 3,
+          "is_mixed_group": false
+        },
+        {
+          "group": "M",
+          "leader": "上發條俱樂部",
+          "size": 40,
+          "is_mixed_group": true
+        }
+      ]
+    },
+    "Louvain": {
+      "modularity": 0.6588,
+      "group_count": 13,
+      "top_groups": [
+        {
+          "group": "A",
+          "leader": "黃氏兄弟",
+          "size": 28,
+          "is_mixed_group": false
+        },
+        {
+          "group": "B",
+          "leader": "一隻阿圓",
+          "size": 11,
+          "is_mixed_group": false
+        },
+        {
+          "group": "C",
+          "leader": "蔡哥",
+          "size": 7,
+          "is_mixed_group": false
+        },
+        {
+          "group": "D",
+          "leader": "Onion-man-洋蔥先生與阿文",
+          "size": 7,
+          "is_mixed_group": false
+        },
+        {
+          "group": "E",
+          "leader": "滴妹",
+          "size": 5,
+          "is_mixed_group": false
+        },
+        {
+          "group": "F",
+          "leader": "羚小鹿",
+          "size": 5,
+          "is_mixed_group": false
+        },
+        {
+          "group": "G",
+          "leader": "江老師",
+          "size": 4,
+          "is_mixed_group": false
+        },
+        {
+          "group": "H",
+          "leader": "蔡阿嘎",
+          "size": 3,
+          "is_mixed_group": false
+        },
+        {
+          "group": "I",
+          "leader": "鵝鵝就是鵝鵝",
+          "size": 3,
+          "is_mixed_group": false
+        },
+        {
+          "group": "J",
+          "leader": "黃小米-Mii",
+          "size": 2,
+          "is_mixed_group": false
+        },
+        {
+          "group": "K",
+          "leader": "健人蓋伊",
+          "size": 2,
+          "is_mixed_group": false
+        },
+        {
+          "group": "L",
+          "leader": "阿啾繪圖同萌",
+          "size": 2,
+          "is_mixed_group": false
+        },
+        {
+          "group": "M",
+          "leader": "上發條俱樂部",
+          "size": 10,
+          "is_mixed_group": true
+        }
+      ]
+    },
+    "Greedy": {
+      "modularity": 0.6588,
+      "group_count": 13,
+      "top_groups": [
+        {
+          "group": "A",
+          "leader": "黃氏兄弟",
+          "size": 28,
+          "is_mixed_group": false
+        },
+        {
+          "group": "B",
+          "leader": "一隻阿圓",
+          "size": 11,
+          "is_mixed_group": false
+        },
+        {
+          "group": "C",
+          "leader": "Onion-man-洋蔥先生與阿文",
+          "size": 7,
+          "is_mixed_group": false
+        },
+        {
+          "group": "D",
+          "leader": "蔡哥",
+          "size": 7,
+          "is_mixed_group": false
+        },
+        {
+          "group": "E",
+          "leader": "滴妹",
+          "size": 5,
+          "is_mixed_group": false
+        },
+        {
+          "group": "F",
+          "leader": "羚小鹿",
+          "size": 5,
+          "is_mixed_group": false
+        },
+        {
+          "group": "G",
+          "leader": "江老師",
+          "size": 4,
+          "is_mixed_group": false
+        },
+        {
+          "group": "H",
+          "leader": "蔡阿嘎",
+          "size": 3,
+          "is_mixed_group": false
+        },
+        {
+          "group": "I",
+          "leader": "鵝鵝就是鵝鵝",
+          "size": 3,
+          "is_mixed_group": false
+        },
+        {
+          "group": "J",
+          "leader": "阿啾繪圖同萌",
+          "size": 2,
+          "is_mixed_group": false
+        },
+        {
+          "group": "K",
+          "leader": "上發條俱樂部",
+          "size": 2,
+          "is_mixed_group": false
+        },
+        {
+          "group": "L",
+          "leader": "健人蓋伊",
+          "size": 2,
+          "is_mixed_group": false
+        },
+        {
+          "group": "M",
+          "leader": "小葵-XiaoKui",
+          "size": 10,
+          "is_mixed_group": true
+        }
+      ]
+    }
+  }
+}

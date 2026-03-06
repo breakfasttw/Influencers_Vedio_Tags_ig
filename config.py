@@ -3,9 +3,17 @@ import os
 # ==========================================
 # 0. 全域參數設定
 # ==========================================
-TOTAL_INFLUENCERS = 100
+TOTAL_INFLUENCERS = 200
+
+# 隨機seed
 RANDOM_SEED = 42
-CUSTOM_COLORS = ['#45B7D1', '#FFA07A', '#F7DC6F', "#58E751", '#BB8FCE', '#FF6B6B', "#5968EE", "#78724F", "#F7A0C0", "#B6B5AE"]
+
+# 是否加入互惠係數
+# 決定本次分析【T要引入互惠係數(細膩捕捉互動事實)】或是【F不引入互惠係數 (有效區分廣義上的生活圈)】?
+USE_RECIPROCITY_WEIGHTING = False
+
+# 圖例的顏色(依序)
+CUSTOM_COLORS = ['#45B7D1', '#FFA07A', '#F7DC6F', "#58E751", '#BB8FCE', '#FF6B6B', "#5968EE", "#837B4D", "#F7A0C0", "#B5BCB2", "#8984CF", "#D9CB9B", "#5F5F5F"]
 
 # 字體設定
 FONT_SETTING = ['Iansui', 'Microsoft JhengHei', 'Arial Unicode MS', 'sans-serif']
@@ -40,8 +48,4 @@ ALGO_CONFIG = {
     }
 }
 
-# ==========================================
-# 3. 是否加入互惠係數
-# 決定本次分析【要引入互惠係數(細膩捕捉互動事實)】或是【不引入互惠係數 (有效區分廣義上的生活圈)】?
-# ==========================================
-USE_RECIPROCITY_WEIGHTING = True
+

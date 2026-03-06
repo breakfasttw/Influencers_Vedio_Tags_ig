@@ -1,0 +1,14 @@
+{
+  "modularity_scores": {
+    "Walktrap": 0.603,
+    "Louvain": 0.6588,
+    "Greedy": 0.6588
+  },
+  "total_nodes": 200,
+  "active_nodes": 89,
+  "isolated_nodes": 111,
+  "density": 0.003442,
+  "reciprocity": 0.277372,
+  "transitivity": 0.15,
+  "avg_clustering": 0.063372
+}
