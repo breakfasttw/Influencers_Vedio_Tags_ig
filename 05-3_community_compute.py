@@ -1,6 +1,6 @@
-# 統一計算社群分群 (模組化參數調校版 12+1 合併邏輯)
-# input: influencer_bonding_matrix.csv (加權連結矩陣)
-# output: community_master.json (各演算法結果與 Q 度)
+# 統一計算社群分群 (模組化參數調校版 12+1 合併邏輯 + 加權中觀指標擴充)
+# input: influencer_bonding_matrix.csv (加權連結矩陣), username_edge_list.csv, zero_degree.json
+# output: community_master.json (各演算法結果與 Q 度、中觀層次 SNA 指標)
 
 import pandas as pd
 import networkx as nx
@@ -12,20 +12,38 @@ import numpy as np
 from config import *
 
 # ==========================================
-# 0. 共同設定與資料載入函式
+# 0. SNA 中觀指標運算分流設定檔 (Configuration)
+# Y: 剔除 0-Degree 後才計算 (孤立節點不參與群體指標，其個人指標直接補 0)
+# ==========================================
+SNA_METRICS_CONFIG = {
+    "Meso": {
+        "Within_module_Degree": "Y",
+        "Participation_Coefficient": "Y",
+        "Cluster_Density": "Y",
+        "Inter_cluster_Edge_Density": "Y"
+    }
+}
+
+# ==========================================
+# 1. 共同設定與資料載入函式
 # ==========================================
 def load_and_prepare_graphs():
     """
     讀取 Bonding Matrix 並產製適合不同套件(igraph, NetworkX)的圖形物件。
+    同步載入 Edge List 建立有向加權圖，以供中觀指標計算。
     """
     matrix_path = os.path.join(INPUT_DIR, 'influencer_bonding_matrix.csv')
-    if not os.path.exists(matrix_path):
-        raise FileNotFoundError(f"找不到矩陣檔案 {matrix_path}")
+    edge_path = EDGE_LIST_PATH
+    zero_path = os.path.join(INPUT_DIR, 'zero_degree.json')
+    
+    if not all(os.path.exists(p) for p in [matrix_path, edge_path, zero_path]):
+        raise FileNotFoundError(f"錯誤：找不到矩陣、邊清單或 zero_degree.json 檔案")
         
     full_bonding_df = pd.read_csv(matrix_path, index_col=0)
+    with open(zero_path, 'r', encoding='utf-8') as f:
+        zero_degree_nodes = json.load(f)
     
-    # --- [關鍵修正]：僅保留有互動強度的節點參與分群 ---
-    # 計算每個 Row 的加總，大於 0 代表有標記他人或被標記
+    # --- [關鍵修正]：僅保留有互動強度的節點參與分群 (天然排除 0-Degree) ---
     active_mask = full_bonding_df.sum(axis=1) > 0
     bonding_df = full_bonding_df.loc[active_mask, active_mask]
     
@@ -41,16 +59,27 @@ def load_and_prepare_graphs():
     g_ig.vs['name'] = node_names
     g_ig.es['weight'] = weights
 
-    # --- 準備 NetworkX 物件 (用於 Louvain/Greedy) ---
+    # --- 準備 NetworkX 物件 (用於 Louvain/Greedy 與模組內分支度) ---
+    # 此為 Bonding 強度的無向圖
     G_nx = nx.Graph()
     G_nx.add_nodes_from(node_names)
     for (s, t), w in zip(list(zip(sources, targets)), weights):
         G_nx.add_edge(node_names[s], node_names[t], weight=w)
 
-    return G_nx, g_ig, node_names
+    # --- 準備有向加權圖 (用於參與係數與網路密度) ---
+    df_edges = pd.read_csv(edge_path)
+    df_edges = df_edges[df_edges['source'] != df_edges['target']] # 剔除自我標記
+    
+    G_dir = nx.DiGraph()
+    G_dir.add_nodes_from(node_names) # 只加入活躍網紅
+    for _, row in df_edges.iterrows():
+        if row['source'] in node_names and row['target'] in node_names:
+            G_dir.add_edge(row['source'], row['target'], weight=row['count'])
+
+    return G_dir, G_nx, g_ig, node_names, zero_degree_nodes
 
 # ==========================================
-# 1. 分群上限設定，搭配 config 的 CUSTOM_COLORS
+# 2. 分群上限設定，搭配 config 的 CUSTOM_COLORS
 # ==========================================
 def merge_communities(communities):
     """
@@ -77,140 +106,218 @@ def merge_communities(communities):
     return top_12
 
 # ==========================================
-# 2. WalkTrap 演算法函式
+# 3. 中觀層次指標計算核心 (Meso Metrics Engine)
 # ==========================================
-def compute_walktrap_algorithm(g_ig, node_names):
+def compute_meso_metrics(G_dir, G_nx, membership, zero_degree_nodes):
+    """
+    計算中觀層次 SNA 指標。
+    G_dir: 真實標記次數的有向圖 (用於密度與參與係數)
+    G_nx: Bonding 強度的無向圖 (用於模組內分支度)
+    """
+    meso_results = {
+        "Cluster_Density": {},
+        "Inter_cluster_Edge_Density": {},
+        "Node_Metrics": {}
+    }
+    
+    node_to_cluster = {}
+    for cid, members in enumerate(membership):
+        for node in members:
+            node_to_cluster[node] = cid
+
+    # --- A. 群體指標 (Cluster-wide Metrics) ---
+    for cid, members in enumerate(membership):
+        group_name = f"Group_{cid}"
+        # 1. Cluster Density (群內密度 - 無加權)
+        if len(members) > 1:
+            meso_results["Cluster_Density"][group_name] = nx.density(G_dir.subgraph(members))
+        else:
+            meso_results["Cluster_Density"][group_name] = 0.0
+
+    # 2. Inter-cluster Edge Density (群間邊密度 - 無加權)
+    for cid1, members1 in enumerate(membership):
+        g1_name = f"Group_{cid1}"
+        meso_results["Inter_cluster_Edge_Density"][g1_name] = {}
+        
+        for cid2, members2 in enumerate(membership):
+            if cid1 == cid2: continue
+            g2_name = f"Group_{cid2}"
+            
+            if len(members1) == 0 or len(members2) == 0:
+                meso_results["Inter_cluster_Edge_Density"][g1_name][g2_name] = 0.0
+            else:
+                edges_between = len(list(nx.edge_boundary(G_dir, members1, members2)))
+                possible_edges = len(members1) * len(members2)
+                meso_results["Inter_cluster_Edge_Density"][g1_name][g2_name] = edges_between / possible_edges
+
+    # --- B. 個人在群內的指標 (Node-specific Cluster Metrics) ---
+    for cid, members in enumerate(membership):
+        # 3. Within-module Degree (依據 Bonding 強度計算 Z-score)
+        in_cluster_degrees = {}
+        if len(members) > 0:
+            subg = G_nx.subgraph(members) # 使用加權無向圖 G_nx
+            for n in members:
+                in_cluster_degrees[n] = subg.degree(n, weight='weight')
+                
+            mean_k = np.mean(list(in_cluster_degrees.values()))
+            std_k = np.std(list(in_cluster_degrees.values()))
+        else:
+            mean_k, std_k = 0, 0
+
+        for node in members:
+            if node not in meso_results["Node_Metrics"]:
+                meso_results["Node_Metrics"][node] = {}
+                
+            if std_k > 0 and node in in_cluster_degrees:
+                z_score = (in_cluster_degrees[node] - mean_k) / std_k
+            else:
+                z_score = 0.0
+            meso_results["Node_Metrics"][node]["Within_module_Degree"] = round(z_score, 4)
+
+    # 4. Participation Coefficient (參與係數 P - 依據 Tag 有向加權)
+    for node in G_dir.nodes():
+        total_weight = G_dir.degree(node, weight='weight') # 總互動強度 (In + Out)
+        if total_weight == 0:
+            meso_results["Node_Metrics"][node]["Participation_Coefficient"] = 0.0
+            continue
+            
+        cluster_links = {}
+        # 統計連向各群的標記權重
+        for neighbor in G_dir.successors(node):
+            if neighbor in node_to_cluster:
+                cid = node_to_cluster[neighbor]
+                cluster_links[cid] = cluster_links.get(cid, 0) + G_dir[node][neighbor]['weight']
+        # 統計來自各群的標記權重
+        for neighbor in G_dir.predecessors(node):
+            if neighbor in node_to_cluster:
+                cid = node_to_cluster[neighbor]
+                cluster_links[cid] = cluster_links.get(cid, 0) + G_dir[neighbor][node]['weight']
+                
+        sum_sq = sum((cw / total_weight) ** 2 for cw in cluster_links.values())
+        p_coef = 1.0 - sum_sq
+        meso_results["Node_Metrics"][node]["Participation_Coefficient"] = round(p_coef, 4)
+
+    # --- C. 補齊 0-Degree 網紅的中觀數值 ---
+    for node in zero_degree_nodes:
+        meso_results["Node_Metrics"][node] = {
+            "Within_module_Degree": 0.0,
+            "Participation_Coefficient": 0.0
+        }
+
+    return meso_results
+
+# ==========================================
+# 4. WalkTrap 演算法函式
+# ==========================================
+def compute_walktrap_algorithm(G_dir, G_nx, g_ig, node_names, zero_degree_nodes):
     """
     Walktrap 演算法：基於隨機走訪(Random Walk)的社群偵測。
-    
-    [可調參數說明]：
-    - steps (預設 4)：隨機走訪的步數。
-        * 步數短(3-4)：能捕捉到更緊密、微小的社交核心。
-        * 步數長(5-8)：會將鄰近的小社群合併為較大的生活圈。
-    - weights: 使用加權計算，次數越高越容易被困在同一個群體。
     """
     print("-> 正在執行 Walktrap 運算...")
-    
-    # 核心參數：steps
     walk_steps = 4 
     
-    # 執行運算
     dendrogram = g_ig.community_walktrap(weights='weight', steps=walk_steps)
-    clusters = dendrogram.as_clustering() # 自動選取 Modularity 最高處切割
-    
-    # 計算模組化 Q 度 (加權版)
+    clusters = dendrogram.as_clustering()
     q_score = g_ig.modularity(clusters, weights='weight')
     
-    # 轉換為標準名單格式
     raw_communities = [list(np.array(node_names)[list(c)]) for c in clusters]
+    final_communities = merge_communities(raw_communities)
+    
+    meso_metrics = compute_meso_metrics(G_dir, G_nx, final_communities, zero_degree_nodes)
+    
     return {
         "modularity": q_score, 
-        "communities": merge_communities(raw_communities), 
+        "Cluster_Density": meso_metrics["Cluster_Density"],
+        "Inter_cluster_Edge_Density": meso_metrics["Inter_cluster_Edge_Density"],
+        "membership": final_communities,
+        "node_metrics": meso_metrics["Node_Metrics"],
         "params": {"steps": walk_steps}
     }
 
 # ==========================================
-# 3. Louvain 演算法函式
+# 5. Louvain 演算法函式
 # ==========================================
-def compute_louvain_algorithm(G_nx):
+def compute_louvain_algorithm(G_dir, G_nx, zero_degree_nodes):
     """
     Louvain 演算法：基於多層級模組化最大化的啟發式演算法。
-    
-    [可調參數說明]：
-    - weight: 指定邊權重欄位。
-    - resolution (預設 1.0)：解析度參數，控制分群規模。
-        * resolution > 1.0：偏向分出「更多且更小」的社群（細膩捕捉互動事實）。
-        * resolution < 1.0：偏向分出「更少且更大」的社群（區分廣義生活圈）。
-    - seed: 隨機種子，確保結果可被重複驗證。
     """
     print("-> 正在執行 Louvain 運算...")
-    
-    # 核心參數
     res_val = 1.0 
     
-    # 執行運算 (NetworkX 3.0+ 內建支持加權)
-    louvain_comm_list = community.louvain_communities(
-        G_nx, 
-        weight='weight', 
-        resolution=res_val, 
-        seed=RANDOM_SEED
-    )
+    louvain_comm_list = community.louvain_communities(G_nx, weight='weight', resolution=res_val, seed=RANDOM_SEED)
     q_score = community.modularity(G_nx, louvain_comm_list, weight='weight')
     
-    # 計算模組化 Q 度(注意：NetworkX 回傳 set，需轉為 list)
     raw_communities = [list(c) for c in louvain_comm_list]
+    final_communities = merge_communities(raw_communities)
+    
+    meso_metrics = compute_meso_metrics(G_dir, G_nx, final_communities, zero_degree_nodes)
+    
     return {
         "modularity": q_score, 
-        "communities": merge_communities(raw_communities),
+        "Cluster_Density": meso_metrics["Cluster_Density"],
+        "Inter_cluster_Edge_Density": meso_metrics["Inter_cluster_Edge_Density"],
+        "membership": final_communities,
+        "node_metrics": meso_metrics["Node_Metrics"],
         "params": {"resolution": res_val}
     }
 
 # ==========================================
-# 4. Greedy Modularity 演算法函式
+# 6. Greedy Modularity 演算法函式
 # ==========================================
-def compute_greedy_algorithm(G_nx):
+def compute_greedy_algorithm(G_dir, G_nx, zero_degree_nodes):
     """
     Greedy Modularity (Clauset-Newman-Moore)：貪婪搜尋最大化 Q 度的分群方式。
-    
-    [可調參數說明]：
-    - weight: 指定邊權重欄位。
-    - resolution (預設 1.0)：
-        * 影響力與 Louvain 類似，但在中小型網路(如 200 人)中，Greedy 通常會分得比 Louvain 更「大」一些。
     """
     print("-> 正在執行 Greedy Modularity 運算...")
-    
-    # 核心參數
     res_val = 1.0
     
-    # 執行運算
-    greedy_comm_iter = community.greedy_modularity_communities(
-        G_nx, 
-        weight='weight',
-        resolution=res_val
-    )
-    
-    # 計算模組化 Q 度
+    greedy_comm_iter = community.greedy_modularity_communities(G_nx, weight='weight', resolution=res_val)
     q_score = community.modularity(G_nx, greedy_comm_iter, weight='weight')
+    
     raw_communities = [list(c) for c in greedy_comm_iter]
+    final_communities = merge_communities(raw_communities)
+    
+    meso_metrics = compute_meso_metrics(G_dir, G_nx, final_communities, zero_degree_nodes)
+    
     return {
         "modularity": q_score, 
-        "communities": merge_communities(raw_communities),
+        "Cluster_Density": meso_metrics["Cluster_Density"],
+        "Inter_cluster_Edge_Density": meso_metrics["Inter_cluster_Edge_Density"],
+        "membership": final_communities,
+        "node_metrics": meso_metrics["Node_Metrics"],
         "params": {"resolution": res_val}
     }
 
 # ==========================================
-# 5. 儲存與輸出函式
+# 7. 儲存與輸出函式
 # ==========================================
 def export_community_results(all_results):
-    """
-    將所有演算法的結果整合存為 JSON，供後續視覺化程式 (05-4) 使用。
-    """
     save_path = os.path.join(INPUT_DIR, 'community_master.json')
     with open(save_path, 'w', encoding='utf-8') as f:
         json.dump(all_results, f, ensure_ascii=False, indent=2)
-    print(f"--- 分群結果已成功儲存至 {save_path} ---")
+    print(f"--- 分群與中觀指標結果已成功儲存至 {save_path} ---")
 
 # ==========================================
-# 6. 主執行函式 (Main Function)
+# 8. 主執行函式 (Main Function)
 # ==========================================
 def run_community_compute():
-    print("--- 開始執行 05-3：加權社群偵測與參數調校流程 ---")
+    print("--- 開始執行 05-3：加權社群偵測與中觀指標計算 ---")
     
     try:
-        # A. 資料準備
-        G_nx, g_ig, node_names = load_and_prepare_graphs()
+        # A. 資料準備 (取得包含加權的有向圖、無向圖，與孤立名單)
+        G_dir, G_nx, g_ig, node_names, zero_degree_nodes = load_and_prepare_graphs()
         
         # B. 執行各演算法
         final_results = {}
         
-        final_results['Walktrap'] = compute_walktrap_algorithm(g_ig, node_names)
-        final_results['Louvain'] = compute_louvain_algorithm(G_nx)
-        final_results['Greedy'] = compute_greedy_algorithm(G_nx)
+        final_results['Walktrap'] = compute_walktrap_algorithm(G_dir, G_nx, g_ig, node_names, zero_degree_nodes)
+        final_results['Louvain'] = compute_louvain_algorithm(G_dir, G_nx, zero_degree_nodes)
+        final_results['Greedy'] = compute_greedy_algorithm(G_dir, G_nx, zero_degree_nodes)
         
         # C. 顯示初步結果
-        print("\n[運算報告摘要]")
+        print("\n[演算法效能 Q 度摘要]")
         for algo, data in final_results.items():
-            print(f"- {algo:10}: {len(data['communities'])} 群, Q={data['modularity']:.4f}")
+            print(f"- {algo:10}: {len(data['membership'])} 群, Q={data['modularity']:.4f}")
             
         # D. 輸出
         export_community_results(final_results)

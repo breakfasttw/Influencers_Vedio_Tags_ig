@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "total_influencers": 200,
+    "active_nodes": 89,
+    "isolated_nodes": 111,
+    "reciprocity_mode": false,
+    "analysis_date": "2026-03-04"
+  },
+  "global_metrics": {
+    "density": 0.003442,
+    "reciprocity": 0.277372,
+    "transitivity": 0.15,
+    "average_clustering": 0.063372
+  },
+  "top_influencers": {
+    "by_in_degree": [
+      {
+        "Person_Name": "蔡阿嘎",
+        "In_Degree (被標記數)": 146
+      },
+      {
+        "Person_Name": "嘎嫂二伯",
+        "In_Degree (被標記數)": 49
+      },
+      {
+        "Person_Name": "一隻阿圓",
+        "In_Degree (被標記數)": 32
+      },
+      {
+        "Person_Name": "滴妹",
+        "In_Degree (被標記數)": 30
+      },
+      {
+        "Person_Name": "上發條俱樂部",
+        "In_Degree (被標記數)": 24
+      }
+    ],
+    "by_out_degree": [
+      {
+        "Person_Name": "嘎嫂二伯",
+        "Out_Degree (主動標記數)": 122
+      },
+      {
+        "Person_Name": "蔡阿嘎",
+        "Out_Degree (主動標記數)": 50
+      },
+      {
+        "Person_Name": "阿滴英文",
+        "Out_Degree (主動標記數)": 38
+      },
+      {
+        "Person_Name": "蔡桃貴",
+        "Out_Degree (主動標記數)": 33
+      },
+      {
+        "Person_Name": "連環泡有芒果",
+        "Out_Degree (主動標記數)": 24
+      }
+    ],
+    "by_betweenness": [
+      {
+        "Person_Name": "蔡哥",
+        "Betweenness_Centrality": 0.012762
+      },
+      {
+        "Person_Name": "一隻阿圓",
+        "Betweenness_Centrality": 0.007377
+      },
+      {
+        "Person_Name": "黃氏兄弟",
+        "Betweenness_Centrality": 0.006599
+      },
+      {
+        "Person_Name": "阿滴英文",
+        "Betweenness_Centrality": 0.006425
+      },
+      {
+        "Person_Name": "PEETA葛格",
+        "Betweenness_Centrality": 0.005964
+      }
+    ]
+  },
+  "algorithm_comparison": {
+    "Walktrap": {
+      "modularity": 0.603,
+      "group_count": 13,
+      "groups": [
+        {
+          "group_id": "A",
+          "leader": "蔡哥",
+          "member_count": 6,
+          "is_other_group": false
+        },
+        {
+          "group_id": "B",
+          "leader": "一隻阿圓",
+          "member_count": 5,
+          "is_other_group": false
+        },
+        {
+          "group_id": "C",
+          "leader": "Onion-man-洋蔥先生與阿文",
+          "member_count": 5,
+          "is_other_group": false
+        },
+        {
+          "group_id": "D",
+          "leader": "黃氏兄弟",
+          "member_count": 5,
+          "is_other_group": false
+        },
+        {
+          "group_id": "E",
+          "leader": "Joeman",
+          "member_count": 4,
+          "is_other_group": false
+        },
+        {
+          "group_id": "F",
+          "leader": "滴妹",
+          "member_count": 4,
+          "is_other_group": false
+        },
+        {
+          "group_id": "G",
+          "leader": "魚乾",
+          "member_count": 4,
+          "is_other_group": false
+        },
+        {
+          "group_id": "H",
+          "leader": "這群人-董仔",
+          "member_count": 4,
+          "is_other_group": false
+        },
+        {
+          "group_id": "I",
+          "leader": "蔡阿嘎",
+          "member_count": 3,
+          "is_other_group": false
+        },
+        {
+          "group_id": "J",
+          "leader": "How-Fun-如何爽",
+          "member_count": 3,
+          "is_other_group": false
+        },
+        {
+          "group_id": "K",
+          "leader": "羚小鹿",
+          "member_count": 3,
+          "is_other_group": false
+        },
+        {
+          "group_id": "L",
+          "leader": "見習網美小吳",
+          "member_count": 3,
+          "is_other_group": false
+        },
+        {
+          "group_id": "M",
+          "leader": "上發條俱樂部",
+          "member_count": 40,
+          "is_other_group": true
+        }
+      ]
+    },
+    "Louvain": {
+      "modularity": 0.6588,
+      "group_count": 13,
+      "groups": [
+        {
+          "group_id": "A",
+          "leader": "黃氏兄弟",
+          "member_count": 28,
+          "is_other_group": false
+        },
+        {
+          "group_id": "B",
+          "leader": "一隻阿圓",
+          "member_count": 11,
+          "is_other_group": false
+        },
+        {
+          "group_id": "C",
+          "leader": "蔡哥",
+          "member_count": 7,
+          "is_other_group": false
+        },
+        {
+          "group_id": "D",
+          "leader": "Onion-man-洋蔥先生與阿文",
+          "member_count": 7,
+          "is_other_group": false
+        },
+        {
+          "group_id": "E",
+          "leader": "滴妹",
+          "member_count": 5,
+          "is_other_group": false
+        },
+        {
+          "group_id": "F",
+          "leader": "羚小鹿",
+          "member_count": 5,
+          "is_other_group": false
+        },
+        {
+          "group_id": "G",
+          "leader": "江老師",
+          "member_count": 4,
+          "is_other_group": false
+        },
+        {
+          "group_id": "H",
+          "leader": "蔡阿嘎",
+          "member_count": 3,
+          "is_other_group": false
+        },
+        {
+          "group_id": "I",
+          "leader": "鵝鵝就是鵝鵝",
+          "member_count": 3,
+          "is_other_group": false
+        },
+        {
+          "group_id": "J",
+          "leader": "黃小米-Mii",
+          "member_count": 2,
+          "is_other_group": false
+        },
+        {
+          "group_id": "K",
+          "leader": "健人蓋伊",
+          "member_count": 2,
+          "is_other_group": false
+        },
+        {
+          "group_id": "L",
+          "leader": "阿啾繪圖同萌",
+          "member_count": 2,
+          "is_other_group": false
+        },
+        {
+          "group_id": "M",
+          "leader": "上發條俱樂部",
+          "member_count": 10,
+          "is_other_group": true
+        }
+      ]
+    },
+    "Greedy": {
+      "modularity": 0.6588,
+      "group_count": 13,
+      "groups": [
+        {
+          "group_id": "A",
+          "leader": "黃氏兄弟",
+          "member_count": 28,
+          "is_other_group": false
+        },
+        {
+          "group_id": "B",
+          "leader": "一隻阿圓",
+          "member_count": 11,
+          "is_other_group": false
+        },
+        {
+          "group_id": "C",
+          "leader": "Onion-man-洋蔥先生與阿文",
+          "member_count": 7,
+          "is_other_group": false
+        },
+        {
+          "group_id": "D",
+          "leader": "蔡哥",
+          "member_count": 7,
+          "is_other_group": false
+        },
+        {
+          "group_id": "E",
+          "leader": "滴妹",
+          "member_count": 5,
+          "is_other_group": false
+        },
+        {
+          "group_id": "F",
+          "leader": "羚小鹿",
+          "member_count": 5,
+          "is_other_group": false
+        },
+        {
+          "group_id": "G",
+          "leader": "江老師",
+          "member_count": 4,
+          "is_other_group": false
+        },
+        {
+          "group_id": "H",
+          "leader": "蔡阿嘎",
+          "member_count": 3,
+          "is_other_group": false
+        },
+        {
+          "group_id": "I",
+          "leader": "鵝鵝就是鵝鵝",
+          "member_count": 3,
+          "is_other_group": false
+        },
+        {
+          "group_id": "J",
+          "leader": "阿啾繪圖同萌",
+          "member_count": 2,
+          "is_other_group": false
+        },
+        {
+          "group_id": "K",
+          "leader": "上發條俱樂部",
+          "member_count": 2,
+          "is_other_group": false
+        },
+        {
+          "group_id": "L",
+          "leader": "健人蓋伊",
+          "member_count": 2,
+          "is_other_group": false
+        },
+        {
+          "group_id": "M",
+          "leader": "小葵-XiaoKui",
+          "member_count": 10,
+          "is_other_group": true
+        }
+      ]
+    }
+  }
+}

@@ -7,10 +7,13 @@
     "analysis_date": "2026-03-04"
   },
   "global_metrics": {
-    "density": 0.003442,
-    "reciprocity": 0.277372,
+    "density": 0.0034422110552763817,
+    "reciprocity": 0.2773722627737226,
     "transitivity": 0.15,
-    "average_clustering": 0.063372
+    "average_clustering": 0.002133189028124716,
+    "density_0": 0.017492339121552604,
+    "assortativity": 0.26582047281697785,
+    "core_periphery_structure_fit": 0.13203463203463203
   },
   "top_influencers": {
     "by_in_degree": [
@@ -60,23 +63,23 @@
     "by_betweenness": [
       {
         "Person_Name": "蔡哥",
-        "Betweenness_Centrality": 0.012762
+        "Betweenness_Centrality": 0.065678
       },
       {
         "Person_Name": "一隻阿圓",
-        "Betweenness_Centrality": 0.007377
+        "Betweenness_Centrality": 0.037966
       },
       {
         "Person_Name": "黃氏兄弟",
-        "Betweenness_Centrality": 0.006599
+        "Betweenness_Centrality": 0.03396
       },
       {
         "Person_Name": "阿滴英文",
-        "Betweenness_Centrality": 0.006425
+        "Betweenness_Centrality": 0.033068
       },
       {
         "Person_Name": "PEETA葛格",
-        "Betweenness_Centrality": 0.005964
+        "Betweenness_Centrality": 0.030695
       }
     ]
   },
@@ -163,7 +166,206 @@
           "member_count": 40,
           "is_other_group": true
         }
-      ]
+      ],
+      "Cluster Density": {
+        "Group_0": 0.23333333333333334,
+        "Group_1": 0.25,
+        "Group_2": 0.35,
+        "Group_3": 0.2,
+        "Group_4": 0.3333333333333333,
+        "Group_5": 0.3333333333333333,
+        "Group_6": 0.25,
+        "Group_7": 0.25,
+        "Group_8": 0.8333333333333334,
+        "Group_9": 0.5,
+        "Group_10": 0.5,
+        "Group_11": 0.5,
+        "Group_12": 0.016025641025641024
+      },
+      "Inter-cluster Edge Density": {
+        "Group_0": {
+          "Group_1": 0.1,
+          "Group_2": 0.03333333333333333,
+          "Group_3": 0.03333333333333333,
+          "Group_4": 0.0,
+          "Group_5": 0.041666666666666664,
+          "Group_6": 0.0,
+          "Group_7": 0.041666666666666664,
+          "Group_8": 0.1111111111111111,
+          "Group_9": 0.1111111111111111,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.004166666666666667
+        },
+        "Group_1": {
+          "Group_0": 0.1,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.05,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_2": {
+          "Group_0": 0.1,
+          "Group_1": 0.04,
+          "Group_3": 0.04,
+          "Group_4": 0.05,
+          "Group_5": 0.1,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_3": {
+          "Group_0": 0.03333333333333333,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.05,
+          "Group_7": 0.05,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.01
+        },
+        "Group_4": {
+          "Group_0": 0.041666666666666664,
+          "Group_1": 0.0,
+          "Group_2": 0.05,
+          "Group_3": 0.05,
+          "Group_5": 0.0625,
+          "Group_6": 0.0,
+          "Group_7": 0.0625,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_5": {
+          "Group_0": 0.041666666666666664,
+          "Group_1": 0.0,
+          "Group_2": 0.1,
+          "Group_3": 0.1,
+          "Group_4": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0625,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.00625
+        },
+        "Group_6": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.05,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_7": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_8": {
+          "Group_0": 0.3888888888888889,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_9": {
+          "Group_0": 0.1111111111111111,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.008333333333333333
+        },
+        "Group_10": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.008333333333333333
+        },
+        "Group_11": {
+          "Group_0": 0.0,
+          "Group_1": 0.06666666666666667,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_12": {
+          "Group_0": 0.008333333333333333,
+          "Group_1": 0.005,
+          "Group_2": 0.005,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.00625,
+          "Group_6": 0.0,
+          "Group_7": 0.00625,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.008333333333333333,
+          "Group_11": 0.0
+        }
+      }
     },
     "Louvain": {
       "modularity": 0.6588,
@@ -247,7 +449,206 @@
           "member_count": 10,
           "is_other_group": true
         }
-      ]
+      ],
+      "Cluster Density": {
+        "Group_0": 0.042328042328042326,
+        "Group_1": 0.13636363636363635,
+        "Group_2": 0.2619047619047619,
+        "Group_3": 0.21428571428571427,
+        "Group_4": 0.3,
+        "Group_5": 0.35,
+        "Group_6": 0.25,
+        "Group_7": 0.8333333333333334,
+        "Group_8": 0.3333333333333333,
+        "Group_9": 0.5,
+        "Group_10": 0.5,
+        "Group_11": 0.5,
+        "Group_12": 0.05555555555555555
+      },
+      "Inter-cluster Edge Density": {
+        "Group_0": {
+          "Group_1": 0.006493506493506494,
+          "Group_2": 0.00510204081632653,
+          "Group_3": 0.00510204081632653,
+          "Group_4": 0.007142857142857143,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.011904761904761904,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_1": {
+          "Group_0": 0.006493506493506494,
+          "Group_2": 0.012987012987012988,
+          "Group_3": 0.0,
+          "Group_4": 0.03636363636363636,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_2": {
+          "Group_0": 0.01020408163265306,
+          "Group_1": 0.012987012987012988,
+          "Group_3": 0.02040816326530612,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.047619047619047616,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_3": {
+          "Group_0": 0.015306122448979591,
+          "Group_1": 0.012987012987012988,
+          "Group_2": 0.04081632653061224,
+          "Group_4": 0.05714285714285714,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_4": {
+          "Group_0": 0.02142857142857143,
+          "Group_1": 0.01818181818181818,
+          "Group_2": 0.02857142857142857,
+          "Group_3": 0.05714285714285714,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_5": {
+          "Group_0": 0.007142857142857143,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_6": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_7": {
+          "Group_0": 0.023809523809523808,
+          "Group_1": 0.0,
+          "Group_2": 0.23809523809523808,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_8": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_9": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_10": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_11": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_12": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0
+        }
+      }
     },
     "Greedy": {
       "modularity": 0.6588,
@@ -331,7 +732,206 @@
           "member_count": 10,
           "is_other_group": true
         }
-      ]
+      ],
+      "Cluster Density": {
+        "Group_0": 0.042328042328042326,
+        "Group_1": 0.13636363636363635,
+        "Group_2": 0.21428571428571427,
+        "Group_3": 0.2619047619047619,
+        "Group_4": 0.3,
+        "Group_5": 0.35,
+        "Group_6": 0.25,
+        "Group_7": 0.8333333333333334,
+        "Group_8": 0.3333333333333333,
+        "Group_9": 0.5,
+        "Group_10": 0.5,
+        "Group_11": 0.5,
+        "Group_12": 0.05555555555555555
+      },
+      "Inter-cluster Edge Density": {
+        "Group_0": {
+          "Group_1": 0.006493506493506494,
+          "Group_2": 0.00510204081632653,
+          "Group_3": 0.00510204081632653,
+          "Group_4": 0.007142857142857143,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.011904761904761904,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_1": {
+          "Group_0": 0.006493506493506494,
+          "Group_2": 0.0,
+          "Group_3": 0.012987012987012988,
+          "Group_4": 0.03636363636363636,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_2": {
+          "Group_0": 0.015306122448979591,
+          "Group_1": 0.012987012987012988,
+          "Group_3": 0.04081632653061224,
+          "Group_4": 0.05714285714285714,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_3": {
+          "Group_0": 0.01020408163265306,
+          "Group_1": 0.012987012987012988,
+          "Group_2": 0.02040816326530612,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.047619047619047616,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_4": {
+          "Group_0": 0.02142857142857143,
+          "Group_1": 0.01818181818181818,
+          "Group_2": 0.05714285714285714,
+          "Group_3": 0.02857142857142857,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_5": {
+          "Group_0": 0.007142857142857143,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_6": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_7": {
+          "Group_0": 0.023809523809523808,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.23809523809523808,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_8": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_9": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_10": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_11": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_11": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_12": 0.0
+        },
+        "Group_12": {
+          "Group_0": 0.0,
+          "Group_1": 0.0,
+          "Group_2": 0.0,
+          "Group_3": 0.0,
+          "Group_4": 0.0,
+          "Group_5": 0.0,
+          "Group_6": 0.0,
+          "Group_7": 0.0,
+          "Group_8": 0.0,
+          "Group_9": 0.0,
+          "Group_10": 0.0,
+          "Group_11": 0.0
+        }
+      }
     }
   }
 }

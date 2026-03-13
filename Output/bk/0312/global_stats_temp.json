@@ -6,7 +6,7 @@
     "密度去0(Density_0)": 0.017492339121552604,
     "互惠率(Reciprocity)": 0.2773722627737226,
     "傳遞性(Transitivity)": 0.15,
-    "團體凝聚力(Avg Clustering)": 0.002133189028124716,
+    "團體凝聚力(Avg Clustering)": 0.0021331890281247163,
     "同質性係數(Assortativity)": 0.26582047281697785,
     "核心邊陲結構適配度(Core-periphery Structure Fit)": 0.13203463203463203
 }
