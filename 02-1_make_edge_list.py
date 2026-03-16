@@ -14,9 +14,9 @@ from config import *
 # 1. 參數設定 (維持彈性維護路徑)
 # ==========================================
 # 沿用原本變數名稱，但對應本次專案檔案
-INPUT_FILENAME = 'influencer_tag_count_final.csv'
-OUTPUT_FILENAME = 'username_edge_list.csv'
-SELF_PROMO_FILENAME = 'self_promotion_stats.csv'
+INPUT_FILENAME = r'output\influencer_tag_count_final.csv'
+OUTPUT_FILENAME = r'output\username_edge_list.csv'
+SELF_PROMO_FILENAME = r'output\self_promotion_stats.csv'
 
 if not os.path.exists(INPUT_DIR):
     os.makedirs(INPUT_DIR)

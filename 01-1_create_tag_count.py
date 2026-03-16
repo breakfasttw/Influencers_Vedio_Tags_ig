@@ -10,7 +10,7 @@ import ast
 input_path = r"ignore\tagger"          # 使用 r 避免斜線轉義問題
 mapping_filename = "ownerid_mapping.csv"  # 放在根目錄，不加路徑
 output_dir = "Output"
-output_filename = "influencer_tag_count.csv"
+output_filename = r"influencer_tag_count.csv"
 
 def run_influencer_analysis():
     # 確保輸出資料夾存在

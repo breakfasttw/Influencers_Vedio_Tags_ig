@@ -3,9 +3,9 @@ import pandas as pd
 # ==========================================
 # 1. 檔案路徑與設定
 # ==========================================
-source_file = "influencer_tag_count.csv"      # 第一階段輸出的檔案
+source_file = r"output/influencer_tag_count.csv"      # 第一階段輸出的檔案
 mapping_file = "AisaTop200.csv"                # 網紅人名對照表
-output_filename = "influencer_tag_count_final.csv"
+output_filename = r"output/influencer_tag_count_final.csv"
 
 def generate_final_report():
     print(f"開始執行最終資料轉換...")
